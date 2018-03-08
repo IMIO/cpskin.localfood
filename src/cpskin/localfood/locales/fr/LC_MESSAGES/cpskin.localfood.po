@@ -1,6 +1,3 @@
-# --- PLEASE EDIT THE LINES BELOW CORRECTLY ---
-# SOME DESCRIPTIVE TITLE.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
@@ -15,41 +12,41 @@ msgstr ""
 "Language-Code: en\n"
 "Language-Name: English\n"
 "Preferred-Encodings: utf-8 latin1\n"
-"Domain: cpskin.localfood\n"
+"Domain: DOMAIN\n"
 
 #: ../content/community_garden.py:39
 msgid "Address"
-msgstr ""
+msgstr "Adresse"
 
 #: ../profiles/default/types/community_garden.xml
 msgid "Community Garden"
-msgstr ""
+msgstr "Potager communautaire"
 
 #: ../profiles/default/types/community_garden.xml
 msgid "Edit"
-msgstr ""
+msgstr "Editer"
 
 #: ../content/community_garden.py:34
 msgid "Gardener"
-msgstr ""
+msgstr "Potagistes"
 
 #: ../content/community_garden.py:29
 msgid "Inauguration"
-msgstr ""
+msgstr "Inauguration"
 
 #: ../content/community_garden.py:24
 msgid "Manager"
-msgstr ""
+msgstr "Gestionnaire"
 
 #: ../content/community_garden.py:14
 msgid "Owner"
-msgstr ""
+msgstr "Propriétaire"
 
 #: ../content/community_garden.py:19
 msgid "Project Author"
-msgstr ""
+msgstr "Auteur de projet et réalisation"
 
 #: ../profiles/default/types/community_garden.xml
 msgid "View"
-msgstr ""
+msgstr "Voir"
 
