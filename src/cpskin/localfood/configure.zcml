@@ -9,6 +9,8 @@
 
   <include package=".browser" />
 
+  <include file="permissions.zcml" />
+
   <genericsetup:registerProfile
       name="default"
       title="cpskin.localfood"
