@@ -4,7 +4,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2018-03-08 12:39+0000\n"
+"POT-Creation-Date: 2018-03-23 14:02+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,8 +17,20 @@ msgstr ""
 "Preferred-Encodings: utf-8 latin1\n"
 "Domain: cpskin.localfood\n"
 
+#: ../content/project.py:49
+msgid "Accessibility"
+msgstr ""
+
 #: ../content/community_garden.py:39
 msgid "Address"
+msgstr ""
+
+#: ../content/project.py:14
+msgid "Area"
+msgstr ""
+
+#: ../content/project.py:29
+msgid "Availability"
 msgstr ""
 
 #: ../profiles/default/types/community_garden.xml
@@ -26,6 +38,7 @@ msgid "Community Garden"
 msgstr ""
 
 #: ../profiles/default/types/community_garden.xml
+#: ../profiles/default/types/project.xml
 msgid "Edit"
 msgstr ""
 
@@ -41,15 +54,37 @@ msgstr ""
 msgid "Manager"
 msgstr ""
 
+#: ../content/project.py:24
+msgid "Occupant"
+msgstr ""
+
+#: ../content/project.py:44
+msgid "Orientation"
+msgstr ""
+
 #: ../content/community_garden.py:14
+#: ../content/project.py:19
 msgid "Owner"
+msgstr ""
+
+#: ../profiles/default/types/project.xml
+msgid "Project"
 msgstr ""
 
 #: ../content/community_garden.py:19
 msgid "Project Author"
 msgstr ""
 
+#: ../content/project.py:34
+msgid "Start of occupation"
+msgstr ""
+
+#: ../content/project.py:39
+msgid "Type of cultivation"
+msgstr ""
+
 #: ../profiles/default/types/community_garden.xml
+#: ../profiles/default/types/project.xml
 msgid "View"
 msgstr ""
 
