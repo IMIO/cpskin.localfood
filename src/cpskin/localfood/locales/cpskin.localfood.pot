@@ -4,7 +4,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2018-03-23 14:02+0000\n"
+"POT-Creation-Date: 2018-03-27 11:34+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -33,8 +33,24 @@ msgstr ""
 msgid "Availability"
 msgstr ""
 
+#: ../profiles/default/workflows/project_workflow/definition.xml
+msgid "Back to draft"
+msgstr ""
+
+#: ../profiles/default/workflows/project_workflow/definition.xml
+msgid "Call for projects"
+msgstr ""
+
+#: ../profiles/default/workflows/project_workflow/definition.xml
+msgid "Calling for projects"
+msgstr ""
+
 #: ../profiles/default/types/community_garden.xml
 msgid "Community Garden"
+msgstr ""
+
+#: ../profiles/default/workflows/project_workflow/definition.xml
+msgid "Draft"
 msgstr ""
 
 #: ../profiles/default/types/community_garden.xml
@@ -75,6 +91,18 @@ msgstr ""
 msgid "Project Author"
 msgstr ""
 
+#: ../profiles/default/workflows/project_workflow/definition.xml
+msgid "Project Workflow"
+msgstr ""
+
+#: ../profiles/default/workflows/project_workflow/definition.xml
+msgid "Realise"
+msgstr ""
+
+#: ../profiles/default/workflows/project_workflow/definition.xml
+msgid "Realization"
+msgstr ""
+
 #: ../content/project.py:34
 msgid "Start of occupation"
 msgstr ""
@@ -86,5 +114,9 @@ msgstr ""
 #: ../profiles/default/types/community_garden.xml
 #: ../profiles/default/types/project.xml
 msgid "View"
+msgstr ""
+
+#: ../profiles/default/workflows/project_workflow/definition.xml
+msgid "Workflow for Project content-type"
 msgstr ""
 
