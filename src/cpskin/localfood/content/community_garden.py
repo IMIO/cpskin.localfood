@@ -3,6 +3,7 @@ from plone.dexterity.content import Item
 from plone.supermodel import model
 from zope import schema
 from zope.interface import implementer
+
 from cpskin.localfood import _
 
 
@@ -11,33 +12,33 @@ class ICommunityGarden(model.Schema):
     """
 
     owner = schema.TextLine(
-        title=_("Owner"),
-        required=True
+        title=_('Owner'),
+        required=True,
     )
 
     project_author = schema.TextLine(
-        title=_("Project Author"),
-        required=True
+        title=_('Project Author'),
+        required=True,
     )
 
     manager = schema.TextLine(
-        title=_("Manager"),
-        required=True
+        title=_('Manager'),
+        required=True,
     )
 
     inauguration = schema.TextLine(
-        title=_("Inauguration"),
-        required=True
+        title=_('Inauguration'),
+        required=True,
     )
 
     gardener = schema.TextLine(
-        title=_("Gardener"),
-        required=True
+        title=_('Gardener'),
+        required=True,
     )
 
     address = schema.TextLine(
-        title=_("Address"),
-        required=True
+        title=_('Address'),
+        required=True,
     )
 
 
