@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2018-03-27 11:34+0000\n"
+"POT-Creation-Date: 2018-03-27 12:18+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -30,25 +30,9 @@ msgstr "Superficie"
 msgid "Availability"
 msgstr "Disponibilité"
 
-#: ../profiles/default/workflows/project_workflow/definition.xml
-msgid "Back to draft"
-msgstr "Revenir au brouillon"
-
-#: ../profiles/default/workflows/project_workflow/definition.xml
-msgid "Call for projects"
-msgstr "Appel à projets"
-
-#: ../profiles/default/workflows/project_workflow/definition.xml
-msgid "Calling for projects"
-msgstr "Faire l'appel à projets"
-
 #: ../profiles/default/types/community_garden.xml
 msgid "Community Garden"
 msgstr "Potager communautaire"
-
-#: ../profiles/default/workflows/project_workflow/definition.xml
-msgid "Draft"
-msgstr "Brouillon"
 
 #: ../profiles/default/types/community_garden.xml
 #: ../profiles/default/types/project.xml
@@ -88,18 +72,6 @@ msgstr "Projet"
 msgid "Project Author"
 msgstr "Auteur de projet et réalisation"
 
-#: ../profiles/default/workflows/project_workflow/definition.xml
-msgid "Project Workflow"
-msgstr "Workflow pour Projet"
-
-#: ../profiles/default/workflows/project_workflow/definition.xml
-msgid "Realise"
-msgstr "Passer en réalisation"
-
-#: ../profiles/default/workflows/project_workflow/definition.xml
-msgid "Realization"
-msgstr "Réalisation"
-
 #: ../content/project.py:34
 msgid "Start of occupation"
 msgstr "Début de l’occupation"
@@ -112,8 +84,4 @@ msgstr "Type de culture"
 #: ../profiles/default/types/project.xml
 msgid "View"
 msgstr "Voir"
-
-#: ../profiles/default/workflows/project_workflow/definition.xml
-msgid "Workflow for Project content-type"
-msgstr "Workflow pour le type d'objet Projet"
 
