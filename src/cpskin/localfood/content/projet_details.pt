@@ -6,7 +6,7 @@
       metal:use-macro="context/main_template/macros/master"
       i18n:domain="ideabox.policy">
     <body>
-        <div class="card-index-presentation">
+        <div class="creafarm">
             <h1>Terrain du Plope</h1>
             <div class="card-index">
                 <ol>
