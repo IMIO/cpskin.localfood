@@ -1,0 +1,74 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"
+      xmlns:tal="http://xml.zope.org/namespaces/tal"
+      xmlns:metal="http://xml.zope.org/namespaces/metal"
+      xmlns:i18n="http://xml.zope.org/namespaces/i18n"
+      lang="en"
+      metal:use-macro="context/main_template/macros/master"
+      i18n:domain="ideabox.policy">
+    <body>
+        <div class="potager">
+            <h1>Potager</h1>
+            <h2>Parc Sainte-Agathe</h2>
+            <div class="card-index">
+                <ol>
+                    <li>
+                        <span>Surface</span>
+                        <span class="detail">365Km2</span>
+                    </li>
+                    <li>
+                        <span>Adresse</span>
+                        <span class="detail">Rue Gaillard Cheval</span>
+                    </li>
+                </ol>
+                <ol>
+                    <li>
+                        <span>Propriétaire</span>
+                        <span class="detail">Mr Gaillard</span>
+                    </li>
+                    <li>
+                        <span>Disponiblité</span>
+                        <span class="detail">27/10/2018</span>
+                    </li>
+                </ol>
+                <ol>
+                    <li>
+                        <span>Orientation</span>
+                        <span class="detail">Nord-Est</span>
+                    </li>
+                    <li>
+                        <span>Accessibilité</span>
+                        <span class="detail">Voiture</span>
+                    </li>
+                </ol>
+            </div>
+            <div id="text">
+                Dans le cadre de « Réinventons Liège », la population liégeoise s’est largement prononcée en faveur du développement et de la promotion d’une alimentation de proximité et de qualité.
+                <br />Cette plateforme a donc pour vocation de référencer les initiatives en termes d’agriculture urbaine et de production alimentaire locale.
+                <br />Notre volonté est de reconnecter production et consommation afin de mieux se nourrir à Liège
+            </div>
+            <div class="card-index no-border">
+                <ol>
+                    <li>
+                        <span class="download block">10 conseils pour préserver les abeilles : pdf à télécharger</span>
+                    </li>
+                </ol>
+                <ol>
+                    <li>
+                        <span class="download block">Plantes mellifères</span>
+                    </li>
+                </ol>
+                <ol>
+                    <li>
+                        <span class="download block">Plantes mellifères</span>
+                    </li>
+                </ol>
+            </div>
+            <div class="card-index-image">
+                <img src="image.png">
+                <img src="image.png">
+                <img src="image.png">
+            </div>
+            <div>CARTE</div>
+        </div>
+    </body>
+</html>
