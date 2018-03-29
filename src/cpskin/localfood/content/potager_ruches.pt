@@ -1,0 +1,87 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"
+      xmlns:tal="http://xml.zope.org/namespaces/tal"
+      xmlns:metal="http://xml.zope.org/namespaces/metal"
+      xmlns:i18n="http://xml.zope.org/namespaces/i18n"
+      lang="en"
+      metal:use-macro="context/main_template/macros/master"
+      i18n:domain="ideabox.policy">
+    <body>
+        <div class="potager">
+            <h1>Ruches</h1>
+            <div class="card-index-image columns-4">
+                <img src="image.png">
+                <img src="image.png">
+                <img src="image.png">
+                <img src="image.png">
+            </div>
+            <div id="text">
+                Depuis mai 2011, Liège est une commune Maya et propose différents services aux apiculteurs du territoire:
+            </div>
+            <h2>Réunions ville/apiculteurs</h2>
+            <div id="text">
+                Dans le cadre de « Réinventons Liège », la population liégeoise s’est largement prononcée en faveur du développement et de la promotion d’une alimentation de proximité et de qualité.
+                <br />Cette plateforme a donc pour vocation de référencer les initiatives en termes d’agriculture urbaine et de production alimentaire locale.
+                <br />Notre volonté est de reconnecter production et consommation afin de mieux se nourrir à Liège
+            </div>
+            <div class="card-index no-border columns-1">
+                <ol>
+                    <li>
+                        <span class="download block">10 conseils pour préserver les abeilles : pdf à télécharger</span>
+                    </li>
+                </ol>
+                <ol>
+                    <li>
+                        <span class="download block">Plantes mellifères</span>
+                    </li>
+                </ol>
+            </div>
+            <h2>Prêt de ruches</h2>
+            <div id="text">
+                Dans le cadre de « Réinventons Liège », la population liégeoise s’est largement prononcée en faveur du développement et de la promotion d’une alimentation de proximité et de qualité.
+                <br />Cette plateforme a donc pour vocation de référencer les initiatives en termes d’agriculture urbaine et de production alimentaire locale.
+                <br />Notre volonté est de reconnecter production et consommation afin de mieux se nourrir à Liège
+            </div>
+            <div class="card-index no-border columns-1">
+                <ol>
+                    <li>
+                        <span class="download block">fiche technique détaillée</span>
+                    </li>
+                </ol>
+                <ol>
+                    <li>
+                        <span class="download block">fiche technique détaillée</span>
+                    </li>
+                </ol>
+            </div>
+            <a href=""><div class="button">Introduire une demande</div></a>
+            <div class="card-index columns-2">
+                <ol>
+                    <li>
+                        <span>Surface</span>
+                        <span class="detail">365Km2</span>
+                    </li>
+                    <li>
+                        <span>Téléphone</span>
+                        <span class="detail">+32 (0)444719</span>
+                    </li>
+                </ol>
+                <ol>
+                    <li>
+                        <span>Adresse</span>
+                        <span class="detail">Rue Gaillard Cheval</span>
+                    </li>
+                    <li>
+                        <span>Mail</span>
+                        <span class="detail">adress@mail.be</span>
+                    </li>
+                </ol>
+            </div>
+            <div class="card-index-image columns-4">
+                <img src="image.png">
+                <img src="image.png">
+                <img src="image.png">
+                <img src="image.png">
+            </div>
+        </div>
+    </body>
+</html>
