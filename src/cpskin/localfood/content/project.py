@@ -23,32 +23,32 @@ class IProject(model.Schema):
 
     occupant = schema.Text(
         title=_('Occupant'),
-        required=True,
+        required=False,
     )
 
     availability = schema.Text(
         title=_('Availability'),
-        required=True,
+        required=False,
     )
 
     occupationStart = schema.Date(
         title=_('Start of occupation'),
-        required=True,
+        required=False,
     )
 
     cultivationType = schema.Text(
         title=_('Type of cultivation'),
-        required=True,
+        required=False,
     )
 
     orientation = schema.Text(
         title=_('Orientation'),
-        required=True,
+        required=False,
     )
 
     accessibility = schema.Text(
         title=_('Accessibility'),
-        required=True,
+        required=False,
     )
 
 

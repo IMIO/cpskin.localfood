@@ -13,32 +13,32 @@ class ICommunityGarden(model.Schema):
 
     owner = schema.TextLine(
         title=_('Owner'),
-        required=True,
+        required=False,
     )
 
     project_author = schema.TextLine(
         title=_('Project Author'),
-        required=True,
+        required=False,
     )
 
     manager = schema.TextLine(
         title=_('Manager'),
-        required=True,
+        required=False,
     )
 
     inauguration = schema.TextLine(
         title=_('Inauguration'),
-        required=True,
+        required=False,
     )
 
     gardener = schema.TextLine(
         title=_('Gardener'),
-        required=True,
+        required=False,
     )
 
     address = schema.TextLine(
         title=_('Address'),
-        required=True,
+        required=False,
     )
 
 
