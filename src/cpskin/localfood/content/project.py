@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 from plone.dexterity.content import Container
 from plone.supermodel import model
+from plone.namedfile.field import NamedBlobImage
 from zope import schema
 from zope.interface import implementer
 
@@ -48,6 +49,16 @@ class IProject(model.Schema):
 
     accessibility = schema.Text(
         title=_('Accessibility'),
+        required=False,
+    )
+
+    address = schema.TextLine(
+        title=_('Address'),
+        required=False,
+    )
+
+    image = NamedBlobImage(
+        title=_('Lead image'),
         required=False,
     )
 

@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
 from plone.dexterity.content import Item
+from plone.namedfile.field import NamedBlobImage
 from plone.supermodel import model
 from zope import schema
 from zope.interface import implementer
@@ -38,6 +39,11 @@ class ICommunityGarden(model.Schema):
 
     address = schema.TextLine(
         title=_('Address'),
+        required=False,
+    )
+
+    image = NamedBlobImage(
+        title=_('Lead image'),
         required=False,
     )
 
