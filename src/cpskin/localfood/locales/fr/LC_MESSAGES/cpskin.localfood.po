@@ -42,7 +42,7 @@ msgstr "Editer"
 
 #: ../faceted/configure.zcml:14
 msgid "Faceted cards with image"
-msgstr ""
+msgstr "Vue par facette cards"
 
 #: ../content/community_garden.py:36
 msgid "Gardener"
@@ -59,7 +59,7 @@ msgstr ""
 #: ../content/community_garden.py:46
 #: ../content/project.py:61
 msgid "Lead image"
-msgstr ""
+msgstr "Image principale"
 
 #: ../content/community_garden.py:26
 msgid "Manager"
