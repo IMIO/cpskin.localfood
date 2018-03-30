@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2018-03-27 12:18+0000\n"
+"POT-Creation-Date: 2018-03-30 05:57+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -14,19 +14,20 @@ msgstr ""
 "Preferred-Encodings: utf-8 latin1\n"
 "Domain: DOMAIN\n"
 
-#: ../content/project.py:49
+#: ../content/project.py:51
 msgid "Accessibility"
 msgstr "Accessibilité"
 
-#: ../content/community_garden.py:39
+#: ../content/community_garden.py:41
+#: ../content/project.py:56
 msgid "Address"
 msgstr "Adresse"
 
-#: ../content/project.py:14
+#: ../content/project.py:16
 msgid "Area"
 msgstr "Superficie"
 
-#: ../content/project.py:29
+#: ../content/project.py:31
 msgid "Availability"
 msgstr "Disponibilité"
 
@@ -39,28 +40,41 @@ msgstr "Potager communautaire"
 msgid "Edit"
 msgstr "Editer"
 
-#: ../content/community_garden.py:34
+#: ../faceted/configure.zcml:14
+msgid "Faceted cards with image"
+msgstr ""
+
+#: ../content/community_garden.py:36
 msgid "Gardener"
 msgstr "Potagistes"
 
-#: ../content/community_garden.py:29
+#: ../content/community_garden.py:31
 msgid "Inauguration"
 msgstr "Inauguration"
 
-#: ../content/community_garden.py:24
+#: ../configure.zcml:22
+msgid "Installs the cpskin.localfood add-on."
+msgstr ""
+
+#: ../content/community_garden.py:46
+#: ../content/project.py:61
+msgid "Lead image"
+msgstr ""
+
+#: ../content/community_garden.py:26
 msgid "Manager"
 msgstr "Gestionnaire"
 
-#: ../content/project.py:24
+#: ../content/project.py:26
 msgid "Occupant"
 msgstr "Occupant"
 
-#: ../content/project.py:44
+#: ../content/project.py:46
 msgid "Orientation"
 msgstr "Orientation"
 
-#: ../content/community_garden.py:14
-#: ../content/project.py:19
+#: ../content/community_garden.py:16
+#: ../content/project.py:21
 msgid "Owner"
 msgstr "Propriétaire"
 
@@ -68,20 +82,31 @@ msgstr "Propriétaire"
 msgid "Project"
 msgstr "Projet"
 
-#: ../content/community_garden.py:19
+#: ../content/community_garden.py:21
 msgid "Project Author"
 msgstr "Auteur de projet et réalisation"
 
-#: ../content/project.py:34
+#: ../content/project.py:36
 msgid "Start of occupation"
 msgstr "Début de l’occupation"
 
-#: ../content/project.py:39
+#: ../content/project.py:41
 msgid "Type of cultivation"
 msgstr "Type de culture"
+
+#: ../configure.zcml:31
+msgid "Uninstalls the cpskin.localfood add-on."
+msgstr ""
 
 #: ../profiles/default/types/community_garden.xml
 #: ../profiles/default/types/project.xml
 msgid "View"
 msgstr "Voir"
 
+#: ../configure.zcml:22
+msgid "cpskin.localfood"
+msgstr ""
+
+#: ../configure.zcml:31
+msgid "cpskin.localfood (uninstall)"
+msgstr ""
