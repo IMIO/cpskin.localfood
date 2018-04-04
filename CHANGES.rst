@@ -5,7 +5,8 @@ Changelog
 1.0a3 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Add a custom view for projects
+  [mpeeters]
 
 
 1.0a2 (2018-04-04)
