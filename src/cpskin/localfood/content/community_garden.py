@@ -1,4 +1,5 @@
 # -*- coding: utf-8 -*-
+from plone.dexterity.browser import view
 from plone.dexterity.content import Item
 from plone.namedfile.field import NamedBlobImage
 from plone.supermodel import model
@@ -6,6 +7,7 @@ from zope import schema
 from zope.interface import implementer
 
 from cpskin.localfood import _
+from cpskin.localfood import utils
 
 
 class ICommunityGarden(model.Schema):
@@ -52,3 +54,28 @@ class ICommunityGarden(model.Schema):
 class CommunityGarden(Item):
     """
     """
+
+
+class CommunityGardenView(view.DefaultView):
+
+    _excluded_fields = (
+        'title',
+        'IBasic.title',
+        'description',
+        'IBasic.description',
+        'image',
+        'text',
+        'IRichText.text',
+    )
+
+    @property
+    def filtered_widgets(self):
+        """
+        Return a list of dictionary with widgets label and values
+        """
+        return [
+            {'label': w.label, 'value': utils.format_widget_value(w)}
+            for w in self.widgets.values()
+            if (w.__name__ not in self._excluded_fields and
+                utils.check_widget_value(w) is True)
+        ]

@@ -5,7 +5,7 @@ Changelog
 1.0a3 (unreleased)
 ------------------
 
-- Add a custom view for projects
+- Add custom views for projects and community gardens
   [mpeeters]
 
 
