@@ -33,6 +33,7 @@
   <property name="behaviors" purge="false">
     <element value="plone.app.content.interfaces.INameFromTitle"/>
     <element value="plone.app.dexterity.behaviors.metadata.IDublinCore"/>
+    <element value="plone.app.contenttypes.behaviors.richtext.IRichText"/>
     <element value="collective.geo.behaviour.interfaces.ICoordinates" />
   </property>
 
