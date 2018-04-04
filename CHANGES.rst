@@ -2,7 +2,7 @@ Changelog
 =========
 
 
-1.0a2 (unreleased)
+1.0a2 (2018-04-04)
 ------------------
 
 - Add the rich text behavior to `Community Garden` and `Project` content types
