@@ -2,7 +2,7 @@ Changelog
 =========
 
 
-1.0a3 (unreleased)
+1.0a3 (2018-04-04)
 ------------------
 
 - Add custom views for projects and community gardens
