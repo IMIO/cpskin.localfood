@@ -58,14 +58,13 @@ class CommunityGarden(Container):
 
 class CommunityGardenView(view.DefaultView):
 
-    _excluded_fields = (
-        'title',
-        'IBasic.title',
-        'description',
-        'IBasic.description',
-        'image',
-        'text',
-        'IRichText.text',
+    _cards_fields = (
+        'owner',
+        'project_author',
+        'manager',
+        'inauguration',
+        'gardener',
+        'address',
     )
 
     @property
@@ -76,6 +75,6 @@ class CommunityGardenView(view.DefaultView):
         return [
             {'label': w.label, 'value': utils.format_widget_value(w)}
             for w in self.widgets.values()
-            if (w.__name__ not in self._excluded_fields and
+            if (w.__name__ in self._cards_fields and
                 utils.check_widget_value(w) is True)
         ]
