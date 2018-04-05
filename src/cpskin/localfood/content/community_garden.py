@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 from plone.dexterity.browser import view
-from plone.dexterity.content import Item
+from plone.dexterity.content import Container
 from plone.namedfile.field import NamedBlobImage
 from plone.supermodel import model
 from zope import schema
@@ -51,7 +51,7 @@ class ICommunityGarden(model.Schema):
 
 
 @implementer(ICommunityGarden)
-class CommunityGarden(Item):
+class CommunityGarden(Container):
     """
     """
 
