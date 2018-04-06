@@ -58,11 +58,11 @@ msgstr ""
 
 #: ../behavior/label.py:23
 msgid "Labels"
-msgstr ""
+msgstr "Labels"
 
 #: ../behavior/label.py:24
 msgid "Labels displayed under the content body"
-msgstr ""
+msgstr "Labels affichés en dessous du contenu"
 
 #: ../content/community_garden.py:48
 #: ../content/project.py:63
@@ -75,7 +75,7 @@ msgstr "Gestionnaire"
 
 #: ../behavior/contact.py:30
 msgid "Name"
-msgstr ""
+msgstr "Nom"
 
 #: ../content/project.py:28
 msgid "Occupant"
