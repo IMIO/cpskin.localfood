@@ -18,16 +18,28 @@ from cpskin.localfood import _
 class IContactCard(directorycontact.IDirectoryContactDetails):
 
     form.omitted('use_parent_address')
+    form.omitted('street')
+    form.omitted('number')
+    form.omitted('additional_address_details')
+    form.omitted('zip_code')
+    form.omitted('city')
+    form.omitted('region')
+    form.omitted('country')
     form.omitted('im_handle')
 
     model.fieldset(
-        'contact_details',
-        label=CCMF(u'Contact details'),
-        fields=['name'],
+        'address',
+        label=CCMF(u'Address'),
+        fields=['name', 'contact_address'],
     )
 
     name = schema.TextLine(
         title=_(u'Name'),
+        required=False,
+    )
+
+    contact_address = schema.TextLine(
+        title=_('Address'),
         required=False,
     )
 
