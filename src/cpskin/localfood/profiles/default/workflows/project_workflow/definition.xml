@@ -4,14 +4,14 @@
  <permission>Change portal events</permission>
  <permission>Modify portal content</permission>
  <permission>View</permission>
- <state state_id="call_for_projects" title="Call for projects" i18n:attributes="title">
+ <state state_id="call_for_projects" title="Call for projects" i18n:attributes="title;state_id">
   <exit-transition transition_id="back_to_draft"/>
   <exit-transition transition_id="realize"/>
  </state>
- <state state_id="draft" title="Draft" i18n:attributes="title">
+ <state state_id="draft" title="Draft" i18n:attributes="title;state_id">
   <exit-transition transition_id="calling_for_projects"/>
  </state>
- <state state_id="realization" title="Realization" i18n:attributes="title">
+ <state state_id="realization" title="Realization" i18n:attributes="title;state_id">
   <exit-transition transition_id="calling_for_projects"/>
  </state>
  <transition transition_id="back_to_draft" title="Back to draft" new_state="draft" trigger="USER" before_script="" after_script="" i18n:attributes="title">

@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2018-03-30 05:57+0000\n"
+"POT-Creation-Date: 2018-04-06 06:59+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -45,3 +45,15 @@ msgstr "Réalisation"
 #: ../profiles/default/workflows/project_workflow/definition.xml
 msgid "Workflow for Project content-type"
 msgstr "Workflow du type de contenu Projet"
+
+#: ../profiles/default/workflows/project_workflow/definition.xml
+msgid "call_for_projects"
+msgstr "Appel à projets"
+
+#: ../profiles/default/workflows/project_workflow/definition.xml
+msgid "draft"
+msgstr "Brouillon"
+
+#: ../profiles/default/workflows/project_workflow/definition.xml
+msgid "realization"
+msgstr "Réalisation"
