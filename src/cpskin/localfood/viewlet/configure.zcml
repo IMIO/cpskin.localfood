@@ -6,6 +6,15 @@
     i18n_domain="cpskin.localfood">
 
   <browser:viewlet
+      name="contact-card-viewlet"
+      for="cpskin.localfood.behavior.contact.IContactCard"
+      manager="plone.app.layout.viewlets.interfaces.IBelowContentBody"
+      class=".contact.ContactCardViewlet"
+      template="templates/contact_card.pt"
+      permission="zope2.View"
+      />
+
+  <browser:viewlet
       name="labels-viewlet"
       manager="plone.app.layout.viewlets.interfaces.IBelowContentBody"
       class=".label.LabelsViewlet"
