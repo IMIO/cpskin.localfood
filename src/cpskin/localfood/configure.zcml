@@ -12,6 +12,7 @@
   <include package=".browser" />
   <include package=".faceted" />
   <include package=".content" />
+  <include package=".behavior" />
 
   <include file="permissions.zcml" />
 
