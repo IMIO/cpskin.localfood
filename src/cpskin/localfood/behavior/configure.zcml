@@ -16,4 +16,16 @@
     marker=".contact.IContactCard"
     />
 
+  <plone:behavior
+    title="Labels"
+    description="Adds label tags."
+    provides=".label.ILabels"
+    for="plone.dexterity.interfaces.IDexterityContent"
+    />
+
+  <adapter
+    factory=".indexer.LabelsIndexer"
+    name="labels"
+    />
+
 </configure>
