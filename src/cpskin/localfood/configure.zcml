@@ -13,6 +13,7 @@
   <include package=".faceted" />
   <include package=".content" />
   <include package=".behavior" />
+  <include package=".viewlet" />
 
   <genericsetup:registerProfile
       name="default"
