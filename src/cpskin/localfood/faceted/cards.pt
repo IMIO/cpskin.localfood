@@ -16,7 +16,7 @@
 
         <div metal:use-macro="context/batch_macros/macros/navigation" />
 
-        <div id="facet_view" class="eea-preview-items">
+        <div id="facet_view" class="eea-preview-items columns-2 vertical">
           <tal:entries repeat="brain batch">
             <tal:block define="idx python:repeat['brain'].index + 1;
                                obj brain/getObject">
@@ -33,10 +33,17 @@
               <a href="" title=""
                  tal:attributes="href view_url;
                                  title title">
+
                 <div class="image" tal:attributes="style string: background-image:url('${image_url}')"></div>
-                <div>
-                  <div class="title" tal:content="title">title</div>
-                  <div class="description" tal:content="obj/description">description</div>
+                <div class="text">
+                  <div tal:condition="python: brain.portal_type == 'project'">
+                    <div class="title" tal:content="brain/review_state" i18n:domain="plone" i18n:translate="">state</div>
+                    <h3 tal:content="title">title</h3>
+                  </div>
+                  <div tal:condition="python: brain.portal_type != 'project'">
+                    <h3 tal:content="title">title</h3>
+                    <div class="title" tal:content="obj/description">description</div>
+                  </div>
                 </div>
               </a>
               </tal:block>
