@@ -5,7 +5,29 @@ Changelog
 1.0a4 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Extend the addable types for homepage view
+  [mpeeters]
+
+- Add the documents and images to the community garden view
+  [mpeeters]
+
+- Add an overlay for project images
+  [mpeeters]
+
+- Add a behavior and viewlet for labels
+  [mpeeters]
+
+- Add a behavior and viewlet for contact cards
+  [mpeeters]
+
+- Update faceted card view
+  [mpeeters]
+
+- Include collective.behavior.richdescription for faceted descriptions
+  [mpeeters]
+
+- Community Garden must be folderish and update allowed types
+  [mpeeters]
 
 
 1.0a3 (2018-04-04)
