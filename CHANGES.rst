@@ -2,7 +2,7 @@ Changelog
 =========
 
 
-1.0a4 (unreleased)
+1.0a4 (2018-04-08)
 ------------------
 
 - Extend the addable types for homepage view
