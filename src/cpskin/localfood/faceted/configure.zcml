@@ -2,7 +2,7 @@
     xmlns="http://namespaces.zope.org/zope"
     xmlns:faceted="http://namespaces.zope.org/faceted"
     xmlns:browser="http://namespaces.zope.org/browser"
-    i18n_domain="cpskin.localfood">
+    i18n_domain="eea">
 
   <include package="eea.facetednavigation" />
 
