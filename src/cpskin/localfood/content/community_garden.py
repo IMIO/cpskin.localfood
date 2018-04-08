@@ -78,3 +78,15 @@ class CommunityGardenView(view.DefaultView):
             if (w.__name__ in self._cards_fields and
                 utils.check_widget_value(w) is True)
         ]
+
+    @property
+    def documents(self):
+        return self.context.listFolderContents(
+            contentFilter={"portal_type": "File"},
+        )
+
+    @property
+    def images(self):
+        return self.context.listFolderContents(
+            contentFilter={"portal_type": "Image"},
+        )
