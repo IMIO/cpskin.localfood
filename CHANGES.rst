@@ -5,7 +5,8 @@ Changelog
 1.0a5 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Fix an Acquisition problem
+  [mpeeters]
 
 
 1.0a4 (2018-04-08)
