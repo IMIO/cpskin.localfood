@@ -11,6 +11,14 @@
       layer="cpskin.localfood.interfaces.ICpskinLocalfoodLayer"
       />
 
+
+  <browser:page
+    name="product-selection"
+    for="*"
+    class=".matchmaking.ProductSelectionForm"
+    permission="zope2.View"
+    />
+
   <!-- Publish static files -->
   <plone:static
       name="cpskin.localfood"
