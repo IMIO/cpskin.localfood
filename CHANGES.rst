@@ -2,7 +2,7 @@ Changelog
 =========
 
 
-1.0a6 (unreleased)
+1.0a6 (2018-04-12)
 ------------------
 
 - Add more field to the `IContactCard` behavior
