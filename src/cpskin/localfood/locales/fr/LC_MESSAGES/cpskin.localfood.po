@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2018-04-07 14:40+0000\n"
+"POT-Creation-Date: 2018-04-12 11:15+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,7 +18,7 @@ msgstr ""
 msgid "Accessibility"
 msgstr "Accessibilité"
 
-#: ../behavior/contact.py:42
+#: ../behavior/contact.py:52
 #: ../content/community_garden.py:43
 #: ../content/project.py:58
 msgid "Address"
@@ -41,6 +41,11 @@ msgstr "Potager communautaire"
 msgid "Edit"
 msgstr "Editer"
 
+#: ../behavior/contact.py:37
+#: ../viewlet/contact.py:16
+msgid "Firstname"
+msgstr "Prénom"
+
 #: ../content/community_garden.py:38
 msgid "Gardener"
 msgstr "Potagistes"
@@ -61,6 +66,11 @@ msgstr "Labels"
 msgid "Labels displayed under the content body"
 msgstr "Labels affichés en dessous du contenu"
 
+#: ../behavior/contact.py:42
+#: ../viewlet/contact.py:17
+msgid "Lastname"
+msgstr "Nom"
+
 #: ../content/community_garden.py:48
 #: ../content/project.py:63
 msgid "Lead image"
@@ -70,14 +80,14 @@ msgstr "Image principale"
 msgid "Manager"
 msgstr "Gestionnaire"
 
-#: ../behavior/contact.py:37
-#: ../viewlet/contact.py:16
-msgid "Name"
-msgstr "Nom"
-
 #: ../content/project.py:28
 msgid "Occupant"
 msgstr "Occupant"
+
+#: ../behavior/contact.py:47
+#: ../viewlet/contact.py:18
+msgid "Organization"
+msgstr "Institution"
 
 #: ../content/project.py:48
 msgid "Orientation"

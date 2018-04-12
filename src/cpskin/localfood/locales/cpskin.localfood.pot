@@ -4,7 +4,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2018-04-07 14:40+0000\n"
+"POT-Creation-Date: 2018-04-12 11:15+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -21,7 +21,7 @@ msgstr ""
 msgid "Accessibility"
 msgstr ""
 
-#: ../behavior/contact.py:42
+#: ../behavior/contact.py:52
 #: ../content/community_garden.py:43
 #: ../content/project.py:58
 msgid "Address"
@@ -44,6 +44,11 @@ msgstr ""
 msgid "Edit"
 msgstr ""
 
+#: ../behavior/contact.py:37
+#: ../viewlet/contact.py:16
+msgid "Firstname"
+msgstr ""
+
 #: ../content/community_garden.py:38
 msgid "Gardener"
 msgstr ""
@@ -64,6 +69,11 @@ msgstr ""
 msgid "Labels displayed under the content body"
 msgstr ""
 
+#: ../behavior/contact.py:42
+#: ../viewlet/contact.py:17
+msgid "Lastname"
+msgstr ""
+
 #: ../content/community_garden.py:48
 #: ../content/project.py:63
 msgid "Lead image"
@@ -73,13 +83,13 @@ msgstr ""
 msgid "Manager"
 msgstr ""
 
-#: ../behavior/contact.py:37
-#: ../viewlet/contact.py:16
-msgid "Name"
-msgstr ""
-
 #: ../content/project.py:28
 msgid "Occupant"
+msgstr ""
+
+#: ../behavior/contact.py:47
+#: ../viewlet/contact.py:18
+msgid "Organization"
 msgstr ""
 
 #: ../content/project.py:48
