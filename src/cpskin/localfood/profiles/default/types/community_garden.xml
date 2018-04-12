@@ -26,7 +26,7 @@
   <property name="global_allow">True</property>
 
   <!-- Schema, class and security -->
-  <property name="add_permission">cpskin.localfood.AddCommunityGarden</property>
+  <property name="add_permission">cmf.AddPortalContent</property>
   <property name="klass">cpskin.localfood.content.community_garden.CommunityGarden</property>
   <property name="model_file"></property>
   <property name="model_source"></property>
@@ -38,6 +38,7 @@
     <element value="plone.app.dexterity.behaviors.metadata.IDublinCore"/>
     <element value="plone.app.contenttypes.behaviors.richtext.IRichText"/>
     <element value="collective.geo.behaviour.interfaces.ICoordinates" />
+    <element value="cpskin.localfood.behavior.contact.IContactCard"/>
   </property>
 
   <!-- View information -->
