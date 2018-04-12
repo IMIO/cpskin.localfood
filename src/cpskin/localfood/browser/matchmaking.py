@@ -75,19 +75,25 @@ class ProductSelectionForm(Form):
     @button.buttonAndHandler(_(u'Confirm'))
     def handleApply(self, action):
         data, errors = self.extractData()
+        if errors:
+            self.status = self.formErrorsMessage
+            return
+
         if data.get('validated', None):
             api.group.add_user(group=self.professionals_group, user=self.member)
-            IStatusMessage(self.request).addStatusMessage(
-                _(u'Your validation has been recorded.'),
-                type=u'info'
+            api.portal.show_message(
+                message=_(u'Your validation has been recorded.'),
+                request=self.request,
+                type='info'
             )
 
             self.request.response.redirect(self.context.absolute_url() + '/@@product-selection')
         if self.in_group:
             self.store_prefs(data)
-            IStatusMessage(self.request).addStatusMessage(
-                _(u'Your product preferences have been recorded.'),
-                type=u'info'
+            api.portal.show_message(
+                message=_(u'Your product preferences have been recorded.'),
+                request=self.request,
+                type='info'
             )
 
             self.request.response.redirect(self.context.absolute_url() + '/@@product-selection')
