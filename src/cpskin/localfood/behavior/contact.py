@@ -30,11 +30,21 @@ class IContactCard(directorycontact.IDirectoryContactDetails):
     model.fieldset(
         'address',
         label=CCMF(u'Address'),
-        fields=['name', 'contact_address'],
+        fields=['lastname', 'firstname', 'organization', 'contact_address'],
     )
 
-    name = schema.TextLine(
-        title=_(u'Name'),
+    lastname = schema.TextLine(
+        title=_(u'Lastname'),
+        required=False,
+    )
+
+    firstname = schema.TextLine(
+        title=_(u'Firstname'),
+        required=False,
+    )
+
+    organization = schema.TextLine(
+        title=_(u'Organization'),
         required=False,
     )
 

@@ -13,7 +13,9 @@ class ContactCardViewlet(base.ViewletBase):
 
     # XXX Should be improved to by more dynamic
     _fields = (
-        (_('Name'), 'name'),
+        (_(u'Lastname'), 'lastname'),
+        (_(u'Firstname'), 'firstname'),
+        (_(u'Organization'), 'organization'),
         (_(u'Address'), 'contact_address'),
         (CPMF('Phones'), 'phone'),
         (CCMF('Cell phone'), 'cell_phone'),
