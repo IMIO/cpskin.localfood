@@ -5,7 +5,14 @@ Changelog
 1.0a6 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Add more field to the `IContactCard` behavior
+  [mpeeters]
+
+- Change add permission and add the IContactCard behavior to content types
+  [mpeeters]
+
+- Add producer/buyer matchmaking, validation & product selection
+  [ndemonte]
 
 
 1.0a5 (2018-04-10)
