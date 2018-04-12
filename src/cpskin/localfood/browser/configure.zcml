@@ -19,6 +19,22 @@
     permission="zope2.View"
     />
 
+  <browser:page
+    name="producer-discovery"
+    for="*"
+    class=".matchmaking.ProducerDiscoveryView"
+    permission="zope2.View"
+    template="templates/producer_discovery.pt"
+    />
+
+  <browser:page
+    name="matchmaking-intro"
+    for="*"
+    class=".matchmaking.MatchmakingIntroView"
+    permission="zope2.View"
+    template="templates/matchmaking_intro.pt"
+    />
+
   <!-- Publish static files -->
   <plone:static
       name="cpskin.localfood"

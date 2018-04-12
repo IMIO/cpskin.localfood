@@ -1,0 +1,31 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"
+      lang="en"
+      xmlns:i18n="http://xml.zope.org/namespaces/i18n"
+      xmlns:tal="http://xml.zope.org/namespaces/tal"
+      xmlns:metal="http://xml.zope.org/namespaces/metal"
+      metal:use-macro="context/main_template/macros/master"
+      i18n:domain="cpskin.localfood">
+<body>
+
+    <div metal:fill-slot="main">
+      <div i18n:translate="">
+        <p>L’utilisation de produits locaux et de saison est de plus en plus plébiscitée par le grand public.
+          Cet espace est dédié aux professionnels, qu’ils soient producteurs ou
+          qu’ils souhaitent utiliser les produits locaux dans leur établissement.</p>
+        <p>Consultez la charte
+          <a i18n:name="alimentation_locale_a_liege" href="">« Alimentation locale @ Liège »</a>
+          et inscrivez-vous afin d’être mis en contact avec des interlocuteurs qui font le choix de l’alimentation locale, durable et de qualité.</p>
+        <ul>
+          <li>
+            <a i18n:name="inscription_producteur_local" href=""
+               tal:attributes="href string:${context/absolute_url}/@@product-selection">Je m’inscris en tant que Producteur local</a>
+          </li>
+          <li>
+            <a i18n:name="inscription_etablissement_horeca" href=""
+               tal:attributes="href string:${context/absolute_url}/@@product-selection">Je m’inscris en tant qu’établissement Horeca</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+</body>
+</html>

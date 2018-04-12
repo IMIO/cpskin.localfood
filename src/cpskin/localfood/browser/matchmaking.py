@@ -1,7 +1,8 @@
 # -*- coding: utf-8 -*-
-from Products.statusmessages.interfaces import IStatusMessage
+
+from Products.Five.browser import BrowserView
+from collective.taxonomy.interfaces import ITaxonomy
 from collective.z3cform.select2.widget.widget import MultiSelect2FieldWidget
-from cpskin.localfood import _
 from plone import api
 from plone.autoform import directives
 from plone.z3cform.fieldsets.utils import remove
@@ -9,7 +10,14 @@ from z3c.form import button
 from z3c.form import field
 from z3c.form.form import Form
 from zope import schema
+from zope.component import queryUtility
 from zope.interface import Interface, implements
+
+from cpskin.localfood import _
+
+
+class MatchmakingIntroView(BrowserView):
+    pass
 
 
 class IChartRegistration(Interface):
@@ -64,6 +72,7 @@ class ProductSelectionForm(Form):
         return obj
 
     def updateWidgets(self):
+
         if self.in_group:
             remove(self, 'validated')
         else:
@@ -71,6 +80,8 @@ class ProductSelectionForm(Form):
             remove(self, 'wanted_products')
 
         super(ProductSelectionForm, self).updateWidgets()
+
+    # TODO: message explicite sur la case "I Validate"
 
     @button.buttonAndHandler(_(u'Confirm'))
     def handleApply(self, action):
@@ -86,8 +97,8 @@ class ProductSelectionForm(Form):
                 request=self.request,
                 type='info'
             )
-
             self.request.response.redirect(self.context.absolute_url() + '/@@product-selection')
+
         if self.in_group:
             self.store_prefs(data)
             api.portal.show_message(
@@ -95,7 +106,6 @@ class ProductSelectionForm(Form):
                 request=self.request,
                 type='info'
             )
-
             self.request.response.redirect(self.context.absolute_url() + '/@@product-selection')
 
         return ''
@@ -105,3 +115,40 @@ class ProductSelectionForm(Form):
             'localfood_proposed_products': data['proposed_products'],
             'localfood_wanted_products': data['wanted_products'],
         })
+
+
+class ProducerDiscoveryView(BrowserView):
+
+    def __call__(self, *args):
+        self.member = api.user.get_current()
+        self.professionals_group = api.group.get(groupname='localfood_professionals')
+        self.in_group = self.professionals_group in api.group.get_groups(user=self.member)
+
+        name = 'collective.taxonomy.typesproduits'
+        self.translator = queryUtility(ITaxonomy, name=name)
+        self.target_language = str(self.translator.getCurrentLanguage(self.request))
+
+        return super(ProducerDiscoveryView, self).__call__(*args)
+
+    def translate_taxonomy_id(self, taxo_id):
+        return self.translator.translate(taxo_id,
+                                         context=self.context,
+                                         target_language=self.target_language)
+
+    def get_producers(self):
+        results = []
+        wanted_products = set(self.member.getProperty('localfood_wanted_products', []))
+        # TODO: cas où aucun product désiré
+        all_members = api.user.get_users(group=self.professionals_group)
+        if self.member in all_members:
+            all_members.remove(self.member)
+        for member in all_members:
+            proposed_products = member.getProperty('localfood_proposed_products', [])
+            intersection = wanted_products.intersection(proposed_products)
+            if intersection:
+                product_names = [self.translate_taxonomy_id(taxo_id) for taxo_id in intersection]
+                results.append({
+                    'member': member,
+                    'products': sorted(product_names)
+                })
+        return results
