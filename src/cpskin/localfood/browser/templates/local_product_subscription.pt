@@ -18,11 +18,11 @@
         <ul>
           <li>
             <a i18n:name="inscription_producteur_local" href=""
-               tal:attributes="href string:${context/absolute_url}/@@product-selection">Je m’inscris en tant que Producteur local</a>
+               tal:attributes="href string:${context/absolute_url}/@@local-product-selection">Je m’inscris en tant que Producteur local</a>
           </li>
           <li>
             <a i18n:name="inscription_etablissement_horeca" href=""
-               tal:attributes="href string:${context/absolute_url}/@@product-selection">Je m’inscris en tant qu’établissement Horeca</a>
+               tal:attributes="href string:${context/absolute_url}/@@local-product-selection">Je m’inscris en tant qu’établissement Horeca</a>
           </li>
         </ul>
       </div>

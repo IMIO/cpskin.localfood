@@ -97,7 +97,9 @@ class ProductSelectionForm(Form):
                 request=self.request,
                 type='info'
             )
-            self.request.response.redirect(self.context.absolute_url() + '/@@product-selection')
+            self.request.response.redirect(
+                '{0}/@@local-product-selection'.format(self.context.absolute_url()),
+            )
 
         if self.in_group:
             self.store_prefs(data)
@@ -106,7 +108,9 @@ class ProductSelectionForm(Form):
                 request=self.request,
                 type='info'
             )
-            self.request.response.redirect(self.context.absolute_url() + '/@@product-selection')
+            self.request.response.redirect(
+                '{0}/@@local-product-selection'.format(self.context.absolute_url()),
+            )
 
         return ''
 

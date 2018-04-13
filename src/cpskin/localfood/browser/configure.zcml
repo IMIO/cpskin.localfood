@@ -13,14 +13,14 @@
 
 
   <browser:page
-    name="product-selection"
+    name="local-product-selection"
     for="*"
     class=".matchmaking.ProductSelectionForm"
     permission="zope2.View"
     />
 
   <browser:page
-    name="producer-discovery"
+    name="local-producer-discovery"
     for="*"
     class=".matchmaking.ProducerDiscoveryView"
     permission="zope2.View"
@@ -28,11 +28,11 @@
     />
 
   <browser:page
-    name="matchmaking-intro"
+    name="local-product-subscription"
     for="*"
     class=".matchmaking.MatchmakingIntroView"
     permission="zope2.View"
-    template="templates/matchmaking_intro.pt"
+    template="templates/local_product_subscription.pt"
     />
 
   <!-- Publish static files -->
