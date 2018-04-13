@@ -35,6 +35,32 @@
     template="templates/local_product_subscription.pt"
     />
 
+  <browser:page
+    name="local-producer-form"
+    for="*"
+    class=".matchmaking.LocalProducerSubscriptionView"
+    permission="zope2.View"
+    />
+
+  <browser:page
+    name="local-horeca-form"
+    for="*"
+    class=".matchmaking.HORECASubscriptionView"
+    permission="zope2.View"
+    />
+
+  <adapter
+    for="zope.interface.Interface
+         zope.interface.Interface
+         cpskin.localfood.browser.matchmaking.ILocalProducerForm
+         zope.interface.Interface
+         zope.interface.Interface"
+    provides="z3c.form.interfaces.IValue"
+    name="default"
+    factory=".matchmaking.LocalProducerDataProvider"
+    />
+
+
   <!-- Publish static files -->
   <plone:static
       name="cpskin.localfood"

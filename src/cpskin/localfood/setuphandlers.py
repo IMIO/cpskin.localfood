@@ -6,17 +6,24 @@ from Products.CMFCore.utils import getToolByName
 
 def installLocalfood(context):
     site = context.getSite()
-
     groups_tool = site.portal_groups
-    group_id = 'localfood_professionals'
-    if group_id not in groups_tool.getGroupIds():
-        groups_tool.addGroup(group_id)
-
     portal_memberdata = getToolByName(site, "portal_memberdata")
-    if not portal_memberdata.hasProperty("localfood_proposed_products"):
-        portal_memberdata.manage_addProperty(id="localfood_proposed_products", value=[], type="lines")
-    if not portal_memberdata.hasProperty("localfood_wanted_products"):
-        portal_memberdata.manage_addProperty(id="localfood_wanted_products", value=[], type="lines")
+
+    for group_id in (
+        'local_producer',
+        'horeca_business'
+    ):
+        if group_id not in groups_tool.getGroupIds():
+            groups_tool.addGroup(group_id)
+
+    for property_id in (
+        'localfood_proposed_products',
+        'localfood_wanted_products',
+    ):
+        if not portal_memberdata.hasProperty(property_id):
+            portal_memberdata.manage_addProperty(id=property_id,
+                                                 value=[],
+                                                 type="lines")
 
 def uninstallLocalfood(context):
     pass
