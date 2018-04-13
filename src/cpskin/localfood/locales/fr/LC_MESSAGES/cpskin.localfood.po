@@ -42,7 +42,7 @@ msgstr "Potager communautaire"
 
 #: ../browser/matchmaking.py:86
 msgid "Confirm"
-msgstr ""
+msgstr "Confirmer"
 
 #: ../profiles/default/types/community_garden.xml
 #: ../profiles/default/types/project.xml
@@ -108,23 +108,23 @@ msgstr "Propriétaire"
 
 #: ../browser/matchmaking.py:28
 msgid "Please select the types of product you have to propose"
-msgstr ""
+msgstr "Veuillez sélectionner les types de produits proposés"
 
 #: ../browser/matchmaking.py:39
 msgid "Please select the types of product you want to find"
-msgstr ""
+msgstr "Veuillez sélectionner les types de produits recherchés"
 
 #: ../browser/templates/producer_discovery.pt:20
 msgid "Producers"
-msgstr ""
+msgstr "Producteurs"
 
 #: ../browser/matchmaking.py:50
 msgid "Product selection"
-msgstr ""
+msgstr "Sélection de produit"
 
 #: ../browser/matchmaking.py:30
 msgid "Product types"
-msgstr ""
+msgstr "Type de produits"
 
 #: ../profiles/default/types/project.xml
 msgid "Project"
@@ -136,7 +136,7 @@ msgstr "Auteur de projet et réalisation"
 
 #: ../browser/matchmaking.py:27
 msgid "Proposed product types"
-msgstr ""
+msgstr "Produits proposés"
 
 #: ../content/project.py:38
 msgid "Start of occupation"
@@ -157,7 +157,7 @@ msgstr "Voir"
 
 #: ../browser/matchmaking.py:38
 msgid "Wanted product types"
-msgstr ""
+msgstr "Produits recherchés"
 
 #: ../browser/matchmaking.py:107
 msgid "Your product preferences have been recorded."
