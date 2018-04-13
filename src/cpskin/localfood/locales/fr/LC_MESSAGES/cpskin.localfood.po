@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2018-04-12 11:15+0000\n"
+"POT-Creation-Date: 2018-04-13 07:51+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -13,6 +13,10 @@ msgstr ""
 "Language-Name: English\n"
 "Preferred-Encodings: utf-8 latin1\n"
 "Domain: DOMAIN\n"
+
+#: ../browser/templates/local_product_subscription.pt:24
+msgid "<p>L'utilisation de produits locaux et de saison est de plus en plus pl&eacute;biscit&eacute;e par le grand public. Cet espace est d&eacute;di&eacute; aux professionnels, qu'ils soient producteurs ou qu'ils souhaitent utiliser les produits locaux dans leur &eacute;tablissement.</p> <p>Consultez la charte ${alimentation_locale_a_liege} et inscrivez-vous afin d'&ecirc;tre mis en contact avec des interlocuteurs qui font le choix de l'alimentation locale, durable et de qualit&eacute;.</p> <ul> <li> ${inscription_producteur_local} </li> <li> ${inscription_etablissement_horeca} </li> </ul>"
+msgstr ""
 
 #: ../content/project.py:53
 msgid "Accessibility"
@@ -36,13 +40,17 @@ msgstr "Disponibilité"
 msgid "Community Garden"
 msgstr "Potager communautaire"
 
+#: ../browser/matchmaking.py:86
+msgid "Confirm"
+msgstr ""
+
 #: ../profiles/default/types/community_garden.xml
 #: ../profiles/default/types/project.xml
 msgid "Edit"
 msgstr "Editer"
 
-#: ../behavior/contact.py:37
-#: ../viewlet/contact.py:16
+#: ../behavior/contact.py:42
+#: ../viewlet/contact.py:17
 msgid "Firstname"
 msgstr "Prénom"
 
@@ -66,8 +74,8 @@ msgstr "Labels"
 msgid "Labels displayed under the content body"
 msgstr "Labels affichés en dessous du contenu"
 
-#: ../behavior/contact.py:42
-#: ../viewlet/contact.py:17
+#: ../behavior/contact.py:37
+#: ../viewlet/contact.py:16
 msgid "Lastname"
 msgstr "Nom"
 
@@ -98,6 +106,26 @@ msgstr "Orientation"
 msgid "Owner"
 msgstr "Propriétaire"
 
+#: ../browser/matchmaking.py:28
+msgid "Please select the types of product you have to propose"
+msgstr ""
+
+#: ../browser/matchmaking.py:39
+msgid "Please select the types of product you want to find"
+msgstr ""
+
+#: ../browser/templates/producer_discovery.pt:20
+msgid "Producers"
+msgstr ""
+
+#: ../browser/matchmaking.py:50
+msgid "Product selection"
+msgstr ""
+
+#: ../browser/matchmaking.py:30
+msgid "Product types"
+msgstr ""
+
 #: ../profiles/default/types/project.xml
 msgid "Project"
 msgstr "Projet"
@@ -105,6 +133,10 @@ msgstr "Projet"
 #: ../content/community_garden.py:23
 msgid "Project Author"
 msgstr "Auteur de projet et réalisation"
+
+#: ../browser/matchmaking.py:27
+msgid "Proposed product types"
+msgstr ""
 
 #: ../content/project.py:38
 msgid "Start of occupation"
@@ -122,6 +154,18 @@ msgstr ""
 #: ../profiles/default/types/project.xml
 msgid "View"
 msgstr "Voir"
+
+#: ../browser/matchmaking.py:38
+msgid "Wanted product types"
+msgstr ""
+
+#: ../browser/matchmaking.py:107
+msgid "Your product preferences have been recorded."
+msgstr ""
+
+#: ../browser/matchmaking.py:96
+msgid "Your validation has been recorded."
+msgstr ""
 
 #: ../configure.zcml:25
 msgid "cpskin.localfood"
