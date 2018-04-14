@@ -4,7 +4,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2018-04-13 07:51+0000\n"
+"POT-Creation-Date: 2018-04-14 17:12+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -26,8 +26,8 @@ msgid "Accessibility"
 msgstr ""
 
 #: ../behavior/contact.py:52
+#: ../browser/matchmaking.py:77
 #: ../content/community_garden.py:43
-#: ../content/project.py:58
 msgid "Address"
 msgstr ""
 
@@ -39,12 +39,36 @@ msgstr ""
 msgid "Availability"
 msgstr ""
 
+#: ../browser/matchmaking.py:67
+msgid "Business name"
+msgstr ""
+
 #: ../profiles/default/types/community_garden.xml
 msgid "Community Garden"
 msgstr ""
 
-#: ../browser/matchmaking.py:86
+#: ../browser/matchmaking.py:87
+msgid "Company number"
+msgstr ""
+
+#: ../browser/matchmaking.py:193
 msgid "Confirm"
+msgstr ""
+
+#: ../browser/matchmaking.py:127
+msgid "Contact by"
+msgstr ""
+
+#: ../browser/matchmaking.py:107
+msgid "Contact email"
+msgstr ""
+
+#: ../browser/matchmaking.py:102
+msgid "Contact mobile"
+msgstr ""
+
+#: ../browser/matchmaking.py:97
+msgid "Contact phone number"
 msgstr ""
 
 #: ../profiles/default/types/community_garden.xml
@@ -59,6 +83,22 @@ msgstr ""
 
 #: ../content/community_garden.py:38
 msgid "Gardener"
+msgstr ""
+
+#: ../browser/templates/producer_discovery.pt:60
+msgid "Horeca business that are looking for products that I propose"
+msgstr ""
+
+#: ../browser/templates/producer_discovery.pt:22
+msgid "I subscribe as a local producer"
+msgstr ""
+
+#: ../browser/templates/producer_discovery.pt:29
+msgid "I subscribe as an horeca business"
+msgstr ""
+
+#: ../browser/matchmaking.py:24
+msgid "In order to continue, you must check this box."
 msgstr ""
 
 #: ../content/community_garden.py:33
@@ -87,6 +127,10 @@ msgstr ""
 msgid "Lead image"
 msgstr ""
 
+#: ../browser/templates/producer_discovery.pt:38
+msgid "Local producers that propose the products I am looking for"
+msgstr ""
+
 #: ../content/community_garden.py:28
 msgid "Manager"
 msgstr ""
@@ -109,23 +153,19 @@ msgstr ""
 msgid "Owner"
 msgstr ""
 
-#: ../browser/matchmaking.py:28
-msgid "Please select the types of product you have to propose"
+#: ../browser/matchmaking.py:153
+msgid "Please select the types of product you can propose"
 msgstr ""
 
-#: ../browser/matchmaking.py:39
+#: ../browser/matchmaking.py:165
 msgid "Please select the types of product you want to find"
 msgstr ""
 
-#: ../browser/templates/producer_discovery.pt:20
-msgid "Producers"
+#: ../browser/matchmaking.py:62
+msgid "Producer name"
 msgstr ""
 
-#: ../browser/matchmaking.py:50
-msgid "Product selection"
-msgstr ""
-
-#: ../browser/matchmaking.py:30
+#: ../browser/matchmaking.py:155
 msgid "Product types"
 msgstr ""
 
@@ -137,12 +177,32 @@ msgstr ""
 msgid "Project Author"
 msgstr ""
 
-#: ../browser/matchmaking.py:27
+#: ../browser/matchmaking.py:152
 msgid "Proposed product types"
+msgstr ""
+
+#: ../browser/matchmaking.py:72
+msgid "Purchasing manager"
 msgstr ""
 
 #: ../content/project.py:38
 msgid "Start of occupation"
+msgstr ""
+
+#: ../browser/matchmaking.py:225
+msgid "Subscription as a HORECA business"
+msgstr ""
+
+#: ../browser/matchmaking.py:177
+msgid "Subscription as a local producer"
+msgstr ""
+
+#: ../browser/templates/producer_discovery.pt:75
+msgid "There is no horeca business for the moment who are looking for that product."
+msgstr ""
+
+#: ../browser/templates/producer_discovery.pt:53
+msgid "There is no local producer for the moment who propose that product."
 msgstr ""
 
 #: ../content/project.py:43
@@ -158,16 +218,12 @@ msgstr ""
 msgid "View"
 msgstr ""
 
-#: ../browser/matchmaking.py:38
+#: ../browser/matchmaking.py:164
 msgid "Wanted product types"
 msgstr ""
 
-#: ../browser/matchmaking.py:107
-msgid "Your product preferences have been recorded."
-msgstr ""
-
-#: ../browser/matchmaking.py:96
-msgid "Your validation has been recorded."
+#: ../browser/matchmaking.py:206
+msgid "Your preferences have been recorded."
 msgstr ""
 
 #: ../configure.zcml:25
