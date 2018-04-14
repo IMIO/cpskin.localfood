@@ -73,12 +73,12 @@ class IProfessionnalsRegistration(Interface):
         required=True,
     )
 
-    producer_address = schema.Text(
+    producer_address = schema.TextLine(
         title=_(u'Address'),
         required=True,
     )
 
-    horeca_address = schema.Text(
+    horeca_address = schema.TextLine(
         title=_(u'Address'),
         required=True,
     )
