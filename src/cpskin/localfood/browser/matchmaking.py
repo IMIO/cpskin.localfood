@@ -248,7 +248,7 @@ class HORECASubscriptionForm(Form):
             return
         else:
             api.group.add_user(
-                group='horeca_business',
+                groupname='horeca_business',
                 user=api.user.get_current())  # TODO: check if not already in
             self.store_prefs(data)
             api.portal.show_message(
