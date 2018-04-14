@@ -11,14 +11,6 @@
       layer="cpskin.localfood.interfaces.ICpskinLocalfoodLayer"
       />
 
-
-  <browser:page
-    name="local-product-selection"
-    for="*"
-    class=".matchmaking.ProductSelectionForm"
-    permission="zope2.View"
-    />
-
   <browser:page
     name="local-producer-discovery"
     for="*"

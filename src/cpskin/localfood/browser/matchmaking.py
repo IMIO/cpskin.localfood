@@ -5,9 +5,7 @@ from collective.taxonomy.interfaces import ITaxonomy
 from collective.z3cform.select2.widget.widget import MultiSelect2FieldWidget
 from plone import api
 from plone.autoform import directives
-from plone.z3cform.fieldsets.utils import remove
 from plone.z3cform.layout import FormWrapper
-
 from z3c.form import button
 from z3c.form import field
 from z3c.form.form import Form
@@ -52,12 +50,7 @@ class MatchmakingIntroView(BrowserView):
     pass
 
 
-class IChartRegistration(Interface):
-    validated = schema.Bool(
-        title=u'I validate the chart.',
-        required=True,
-    )
-
+class IProfessionnalsRegistration(Interface):
     producer_name = schema.TextLine(
         title=_(u'Producer name'),
         required=True,
@@ -113,6 +106,7 @@ class IChartRegistration(Interface):
         constraint=must_be_checked,
     )
 
+    directives.widget(proposed_products=MultiSelect2FieldWidget)
     proposed_products = schema.List(
         title=_(u'Proposed product types'),
         description=_(u'Please select the types of product you can propose'),
@@ -122,8 +116,8 @@ class IChartRegistration(Interface):
         ),
         required=False,
     )
-    directives.widget(proposed_products=MultiSelect2FieldWidget)
 
+    directives.widget(wanted_products=MultiSelect2FieldWidget)
     wanted_products = schema.List(
         title=_(u'Wanted product types'),
         description=_(u'Please select the types of product you want to find'),
@@ -133,13 +127,12 @@ class IChartRegistration(Interface):
         ),
         required=False,
     )
-    directives.widget(wanted_products=MultiSelect2FieldWidget)
 
 
 class LocalProducerSubscriptionForm(Form):
     implements(ILocalProducerForm)
     label = _(u'Subscription as a local producer')
-    fields = field.Fields(IChartRegistration).select(
+    fields = field.Fields(IProfessionnalsRegistration).select(
         'producer_name',
         'address',
         'contacts',
@@ -152,7 +145,6 @@ class LocalProducerSubscriptionForm(Form):
 
     ignoreContext = True
 
-
     @button.buttonAndHandler(_(u'Confirm'))
     def handleApply(self, action):
         data, errors = self.extractData()
@@ -161,8 +153,9 @@ class LocalProducerSubscriptionForm(Form):
             return
         else:
             api.group.add_user(
-                group='local_producer',
-                user=api.user.get_current())  # TODO: check if not already in
+                groupname='local_producer',
+                user=api.user.get_current(),
+            )  # TODO: check if not already in
             self.store_prefs(data)
             api.portal.show_message(
                 message=_(u'Your preferences have been recorded.'),
@@ -185,7 +178,7 @@ class LocalProducerSubscriptionView(FormWrapper):
 class HORECASubscriptionForm(Form):
     implements(ILocalProducerForm)
     label = _(u'Subscription as a HORECA business')
-    fields = field.Fields(IChartRegistration).select(
+    fields = field.Fields(IProfessionnalsRegistration).select(
         'business_name',
         'purchasing_manager',
         'address',
@@ -228,82 +221,6 @@ class HORECASubscriptionView(FormWrapper):
     form = HORECASubscriptionForm
 
 
-class ProductSelectionForm(Form):
-    label = _(u'Product selection')
-    fields = field.Fields(IChartRegistration)
-
-    ignoreContext = False
-
-    def update(self):
-        self.member = api.user.get_current()
-        self.group = api.group.get(groupname='localfood_professionals')
-        self.in_group = self.group in api.group.get_groups(user=self.member)
-
-        super(ProductSelectionForm, self).update()
-
-    def getContent(self):
-
-        class TemporarySettingsContext(object):
-            implements(IChartRegistration)
-
-        obj = TemporarySettingsContext()
-        obj.validated = False
-        obj.proposed_products = self.member.getProperty('localfood_proposed_products', [])
-        obj.wanted_products = self.member.getProperty('localfood_wanted_products', [])
-
-        return obj
-
-    def updateWidgets(self):
-
-        if self.in_group:
-            remove(self, 'validated')
-        else:
-            remove(self, 'proposed_products')
-            remove(self, 'wanted_products')
-
-        super(ProductSelectionForm, self).updateWidgets()
-
-    # TODO: message explicite sur la case "I Validate"
-
-    @button.buttonAndHandler(_(u'Confirm'))
-    def handleApply(self, action):
-        data, errors = self.extractData()
-        if errors:
-            self.status = self.formErrorsMessage
-            return
-
-        if data.get('validated', None):
-            api.group.add_user(group=self.group, user=self.member)
-            api.portal.show_message(
-                message=_(u'Your validation has been recorded.'),
-                request=self.request,
-                type='info'
-            )
-            self.request.response.redirect(
-                '{0}/@@local-product-selection'.format(self.context.absolute_url()),
-            )
-
-        if self.in_group:
-            self.store_prefs(data)
-            api.portal.show_message(
-                message=_(u'Your product preferences have been recorded.'),
-                request=self.request,
-                type='info'
-            )
-            self.request.response.redirect(
-                '{0}/@@local-product-selection'.format(self.context.absolute_url()),
-            )
-
-        return ''
-
-    def store_prefs(self, data):
-
-        self.member.setMemberProperties(mapping={
-            'localfood_proposed_products': data['proposed_products'],
-            'localfood_wanted_products': data['wanted_products'],
-        })
-
-
 class ProducerDiscoveryView(BrowserView):
 
     def __call__(self, *args):
@@ -341,5 +258,3 @@ class ProducerDiscoveryView(BrowserView):
                     'products': sorted(product_names)
                 })
         return results
-
-
