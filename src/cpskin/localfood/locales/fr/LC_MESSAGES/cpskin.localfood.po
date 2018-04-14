@@ -38,7 +38,7 @@ msgstr "Disponibilité"
 
 #: ../browser/matchmaking.py:67
 msgid "Business name"
-msgstr ""
+msgstr "Nom de l'établissement"
 
 #: ../profiles/default/types/community_garden.xml
 msgid "Community Garden"
@@ -46,7 +46,7 @@ msgstr "Potager communautaire"
 
 #: ../browser/matchmaking.py:87
 msgid "Company number"
-msgstr ""
+msgstr "Numéro d'entreprise"
 
 #: ../browser/matchmaking.py:193
 msgid "Confirm"
@@ -54,19 +54,19 @@ msgstr "Confirmer"
 
 #: ../browser/matchmaking.py:127
 msgid "Contact by"
-msgstr ""
+msgstr "Préférence de contact"
 
 #: ../browser/matchmaking.py:107
 msgid "Contact email"
-msgstr ""
+msgstr "Email du contact"
 
 #: ../browser/matchmaking.py:102
 msgid "Contact mobile"
-msgstr ""
+msgstr "Numéro de GSM du contact"
 
 #: ../browser/matchmaking.py:97
 msgid "Contact phone number"
-msgstr ""
+msgstr "Numéro de téléphone du contact"
 
 #: ../profiles/default/types/community_garden.xml
 #: ../profiles/default/types/project.xml
@@ -84,19 +84,19 @@ msgstr "Potagistes"
 
 #: ../browser/templates/producer_discovery.pt:60
 msgid "Horeca business that are looking for products that I propose"
-msgstr ""
+msgstr "Etablissement Horeca à la recherche de produits que je propose"
 
 #: ../browser/templates/producer_discovery.pt:22
 msgid "I subscribe as a local producer"
-msgstr ""
+msgstr "Enregistrement en tant que Producteur local"
 
 #: ../browser/templates/producer_discovery.pt:29
 msgid "I subscribe as an horeca business"
-msgstr ""
+msgstr "Enregistrement en tant qu'établissement Horeca"
 
 #: ../browser/matchmaking.py:24
 msgid "In order to continue, you must check this box."
-msgstr ""
+msgstr "Pour pouvoir continuer, vous devez cocher cette case"
 
 #: ../content/community_garden.py:33
 msgid "Inauguration"
@@ -126,7 +126,7 @@ msgstr "Image principale"
 
 #: ../browser/templates/producer_discovery.pt:38
 msgid "Local producers that propose the products I am looking for"
-msgstr ""
+msgstr "Producteurs locaux proposant les produits que je recherche"
 
 #: ../content/community_garden.py:28
 msgid "Manager"
@@ -152,7 +152,7 @@ msgstr "Propriétaire"
 
 #: ../browser/matchmaking.py:153
 msgid "Please select the types of product you can propose"
-msgstr ""
+msgstr "Veuillez sélectionner les types de produits proposés"
 
 #: ../browser/matchmaking.py:165
 msgid "Please select the types of product you want to find"
@@ -160,7 +160,7 @@ msgstr "Veuillez sélectionner les types de produits recherchés"
 
 #: ../browser/matchmaking.py:62
 msgid "Producer name"
-msgstr ""
+msgstr "Nom du producteur"
 
 #: ../browser/matchmaking.py:155
 msgid "Product types"
@@ -180,7 +180,7 @@ msgstr "Produits proposés"
 
 #: ../browser/matchmaking.py:72
 msgid "Purchasing manager"
-msgstr ""
+msgstr "Nom du responsable achats"
 
 #: ../content/project.py:38
 msgid "Start of occupation"
@@ -188,19 +188,19 @@ msgstr "Début de l’occupation"
 
 #: ../browser/matchmaking.py:225
 msgid "Subscription as a HORECA business"
-msgstr ""
+msgstr "Enregistrement en tant qu'établissement Horeca"
 
 #: ../browser/matchmaking.py:177
 msgid "Subscription as a local producer"
-msgstr ""
+msgstr "Enregistrement en tant que Producteur local"
 
 #: ../browser/templates/producer_discovery.pt:75
 msgid "There is no horeca business for the moment who are looking for that product."
-msgstr ""
+msgstr "Il n'existe pas pour le moment d'établissement Horeca à la recherche de ce type de produit"
 
 #: ../browser/templates/producer_discovery.pt:53
 msgid "There is no local producer for the moment who propose that product."
-msgstr ""
+msgstr "Il n'existe pas pour le moment de Producteur local qui propose ce type de produit"
 
 #: ../content/project.py:43
 msgid "Type of cultivation"
@@ -221,7 +221,7 @@ msgstr "Produits recherchés"
 
 #: ../browser/matchmaking.py:206
 msgid "Your preferences have been recorded."
-msgstr ""
+msgstr "Vos informations ont été enregistrées"
 
 #: ../configure.zcml:25
 msgid "cpskin.localfood"
