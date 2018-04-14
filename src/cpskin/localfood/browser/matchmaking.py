@@ -211,7 +211,7 @@ class LocalProducerSubscriptionForm(Form):
 
     def store_prefs(self, data):
         prefix = 'localfood'
-        data_dict = {'{0}_{1}'.format(prefix, key): value
+        data_dict = {'{0}_{1}'.format(prefix, key): value or ''
                      for (key, value) in data.iteritems()}
         member = api.user.get_current()
         member.setMemberProperties(mapping=data_dict)
@@ -259,7 +259,7 @@ class HORECASubscriptionForm(Form):
 
     def store_prefs(self, data):
         prefix = 'localfood'
-        data_dict = {'{0}_{1}'.format(prefix, key): value
+        data_dict = {'{0}_{1}'.format(prefix, key): value or ''
                      for (key, value) in data.iteritems()}
         member = api.user.get_current()
         member.setMemberProperties(mapping=data_dict)
