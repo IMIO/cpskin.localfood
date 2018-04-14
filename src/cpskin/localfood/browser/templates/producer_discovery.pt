@@ -6,26 +6,79 @@
       metal:use-macro="context/main_template/macros/master"
       i18n:domain="cpskin.localfood">
 <body>
-    <div metal:fill-slot="main">
-      <div tal:condition="not: view/is_horeca_business">
-        Before continuing, you must fill in the sign up form.
-        Please go back to
-        <a href="" tal:attributes="href string:${context/absolute_url}/@@local-product-subscription">
-          the main page.
-        </a>
-      </div>
-      <div id="producers"
-           tal:define="producers view/get_producers"
-           tal:condition="view/is_horeca_business">
-          <h3 i18n:translate="">Producers</h3>
-          <div tal:repeat="producer producers">
-            <div tal:content="python: producer['user'].getProperty('fullname')"></div>
-            <ul>
-              <li tal:repeat="product python: producer['products']"
-                   tal:content="product"></li>
-            </ul>
-          </div>
-      </div>
+    <div metal:fill-slot="main"
+         tal:define="anonymous view/is_anonymous">
+      <tal:if condition="anonymous">
+        You must <a href="login_form">logon</a> to access to this part of the website.
+      </tal:if>
+      <tal:if condition="not: anonymous">
+      <tal:block define="in_horeca_group view/in_horeca_group;
+                          in_local_producer_group view/in_local_producer_group">
+        <div tal:condition="not: python:in_horeca_group or in_local_producer_group">
+          Before continuing, you must fill the form.<br>
+          Please go to:
+          <ul>
+            <li>
+              <a href=""
+                 i18n:translate=""
+                 tal:attributes="href string:${context/absolute_url}/@@local-producer-form">
+                I subscribe as a local producer
+              </a>
+            </li>
+            <li>
+              <a href=""
+                 i18n:translate=""
+                 tal:attributes="href string:${context/absolute_url}/@@local-horeca-form">
+                I subscribe as an horeca business
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div tal:condition="in_horeca_group">
+          <h1 i18n:translate="">Local producers that propose the products I am looking for</h1>
+          <tal:while repeat="product view/looking_for_producers">
+            <h2 tal:content="product/name"></h2>
+            <tal:while repeat="contact product/contacts">
+            <div class="card-index columns-1">
+              <ol class="columns-3">
+                <tal:while repeat="info contact">
+                <li tal:condition="python:info[1]">
+                  <span tal:content="python:info[0]"></span>
+                  <span tal:content="python:info[1]" class="detail"></span>
+                </li>
+                </tal:while>
+              </ol>
+            </div>
+            </tal:while>
+            <p tal:condition="not: product/contacts" i18n:translate="">
+              There is no local producer for the moment who propose that product.
+            </p>
+          </tal:while>
+
+        </div>
+        <div tal:condition="in_local_producer_group">
+          <h1 i18n:translate="">Horeca business that are looking for products that I propose</h1>
+          <tal:while repeat="product view/looking_for_horeca">
+            <h2 tal:content="product/name"></h2>
+            <tal:while repeat="contact product/contacts">
+            <div class="card-index columns-1">
+              <ol class="columns-3">
+                <tal:while repeat="info contact">
+                <li tal:condition="python:info[1]">
+                  <span tal:content="python:info[0]"></span>
+                  <span tal:content="python:info[1]" class="detail"></span>
+                </li>
+                </tal:while>
+              </ol>
+            </div>
+            </tal:while>
+            <p tal:condition="not: product/contacts" i18n:translate="">
+              There is no horeca business for the moment who are looking for that product.
+            </p>
+          </tal:while>
+        </div>
+      </tal:block>
+      </tal:if>
     </div>
 </body>
 </html>

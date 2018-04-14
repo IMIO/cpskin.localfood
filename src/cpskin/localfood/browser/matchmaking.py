@@ -131,7 +131,6 @@ class IProfessionnalsRegistration(Interface):
 
     localfood_chart_acceptation = schema.Bool(
         title=u'I accept the chart conditions.',
-        # TODO: comment ajouter proprement une URL dans le title, sans context?
         required=True,
         constraint=must_be_checked,
     )
@@ -271,38 +270,117 @@ class HORECASubscriptionView(FormWrapper):
 
 class ProducerDiscoveryView(BrowserView):
 
-    def __call__(self, *args):
-        self.member = api.user.get_current()
-        self.horeca_business_group = api.group.get(groupname='horeca_business')
-        self.local_producer_group = api.group.get(groupname='local_producer')
-        self.is_horeca_business = self.horeca_business_group \
-                                  in api.group.get_groups(user=self.member)
+    _producer_contact = (
+        ('producer_name', u'Producer name'),
+        ('producer_address', u'Address'),
+        ('producer_phone_number', u'Contact phone number'),
+        ('producer_mobile', u'Contact mobile'),
+        ('producer_email', u'Contact email'),
+        ('contact_by', u'Contact by'),
+    )
 
-        name = 'collective.taxonomy.typesproduits'
-        self.translator = queryUtility(ITaxonomy, name=name)
-        self.target_language = str(self.translator.getCurrentLanguage(self.request))
+    _horeca_contact = (
+        ('business_name', u'Business name'),
+        ('purchasing_manager', u'Purchasing manager'),
+        ('horeca_address', u'Address'),
+        ('horeca_phone_number', u'Contact phone number'),
+        ('horeca_mobile', u'Contact mobile'),
+        ('horeca_email', u'Contact email'),
+        ('contact_by', u'Contact by'),
+    )
+
+    def __call__(self, *args):
+        if not self.is_anonymous:
+            self.current_user = api.user.get_current()
+            self.user_groups = api.group.get_groups(user=self.current_user)
+            self.translator = queryUtility(
+                ITaxonomy,
+                name='collective.taxonomy.typesproduits',
+            )
+            self.target_language = str(
+                self.translator.getCurrentLanguage(self.request),
+            )
 
         return super(ProducerDiscoveryView, self).__call__(*args)
 
-    def translate_taxonomy_id(self, taxo_id):
-        return self.translator.translate(taxo_id,
-                                         context=self.context,
-                                         target_language=self.target_language)
+    @property
+    def is_anonymous(self):
+        """Verify if the current user is anonymous"""
+        return api.user.is_anonymous()
 
-    def get_producers(self):
-        results = []
-        wanted_products = set(self.member.getProperty('localfood_wanted_products', []))
-        # TODO: cas où aucun product désiré
-        all_producers = api.user.get_users(group=self.local_producer_group)
-        if self.member in all_producers:
-            all_producers.remove(self.member)
-        for producer in all_producers:
-            proposed_products = producer.getProperty('localfood_proposed_products', [])
-            intersection = wanted_products.intersection(proposed_products)
-            if intersection:
-                product_names = [self.translate_taxonomy_id(taxo_id) for taxo_id in intersection]
-                results.append({
-                    'user': producer,
-                    'products': sorted(product_names)
-                })
-        return results
+    @property
+    def in_horeca_group(self):
+        """Verify if the current user is in the horeca_business group"""
+        return 'horeca_business' in [g.id for g in self.user_groups]
+
+    @property
+    def in_local_producer_group(self):
+        """Verify if the current user is in the local_producer group"""
+        return 'local_producer' in [g.id for g in self.user_groups]
+
+    def translate_taxonomy_id(self, taxonomy_id):
+        return self.translator.translate(
+            taxonomy_id,
+            context=self.context,
+            target_language=self.target_language,
+        )
+
+    def looking_for_producers(self):
+        """
+        Return a list of producers by product that the user is looking for
+        """
+        products = self.current_user.getProperty(
+            'localfood_wanted_products',
+            [],
+        )
+        producers = [
+            self.extract_producer_contact(u, products)
+            for u in api.user.get_users(groupname='local_producer')
+        ]
+        return [
+            {
+                'name': self.translate_taxonomy_id(p),
+                'contacts': [contact for contact, proposed_products in producers
+                             if p in proposed_products]
+            }
+            for p in products
+        ]
+
+    def looking_for_horeca(self):
+        """
+        Return a list of horeca business by product that I propose
+        """
+        products = self.current_user.getProperty(
+            'localfood_proposed_products',
+            [],
+        )
+        horeca_business = [
+            self.extract_horeca_contact(u, products)
+            for u in api.user.get_users(groupname='horeca_business')
+        ]
+        return [
+            {
+                'name': self.translate_taxonomy_id(p),
+                'contacts': [contact for contact, wanted_products in horeca_business
+                             if p in wanted_products],
+            }
+            for p in products
+        ]
+
+    def extract_producer_contact(self, user, products):
+        proposed_products = set(user.getProperty('localfood_proposed_products', []))  # noqa
+        if proposed_products.intersection(products):
+            return (
+                [(_(t), user.getProperty('localfood_{0}'.format(k)))
+                 for k, t in self._producer_contact],
+                proposed_products.intersection(products),
+            )
+
+    def extract_horeca_contact(self, user, products):
+        wanted_products = set(user.getProperty('localfood_wanted_products', []))  # noqa
+        if wanted_products.intersection(products):
+            return (
+                [(_(t), user.getProperty('localfood_{0}'.format(k)))
+                 for k, t in self._horeca_contact],
+                wanted_products.intersection(products),
+            )
