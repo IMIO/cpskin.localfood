@@ -66,19 +66,54 @@ class IProfessionnalsRegistration(Interface):
         required=True,
     )
 
-    address = schema.Text(
+    producer_address = schema.Text(
         title=_(u'Address'),
         required=True,
     )
 
-    company_number = schema.TextLine(
+    horeca_address = schema.Text(
+        title=_(u'Address'),
+        required=True,
+    )
+
+    producer_company_number = schema.TextLine(
         title=_(u'Company number'),
         required=True,
     )
 
-    contacts = schema.Text(
-        title=_(u'Contacts'),
+    horeca_company_number = schema.TextLine(
+        title=_(u'Company number'),
+        required=True,
+    )
+
+    producer_phone_number = schema.TextLine(
+        title=_(u'Contact phone number'),
+        required=True,
+    )
+
+    producer_mobile = schema.TextLine(
+        title=_(u'Contact mobile'),
         required=False,
+    )
+
+    producer_email = schema.TextLine(
+        title=_(u'Contact email'),
+        required=True,
+    )
+
+    horeca_phone_number = schema.TextLine(
+        title=_(u'Contact phone number'),
+        required=True,
+    )
+
+    horeca_mobile = schema.TextLine(
+        title=_(u'Contact mobile'),
+        required=False,
+    )
+
+    horeca_email = schema.TextLine(
+        title=_(u'Contact email'),
+        required=True,
     )
 
     contact_by = schema.Choice(
@@ -134,9 +169,11 @@ class LocalProducerSubscriptionForm(Form):
     label = _(u'Subscription as a local producer')
     fields = field.Fields(IProfessionnalsRegistration).select(
         'producer_name',
-        'address',
-        'contacts',
-        'company_number',
+        'producer_address',
+        'producer_phone_number',
+        'producer_mobile',
+        'producer_email',
+        'producer_company_number',
         'proposed_products',
         'contact_by',
         'localfood_chart_acceptation',
@@ -181,9 +218,11 @@ class HORECASubscriptionForm(Form):
     fields = field.Fields(IProfessionnalsRegistration).select(
         'business_name',
         'purchasing_manager',
-        'address',
-        'contacts',
-        'company_number',
+        'horeca_address',
+        'horeca_phone_number',
+        'horeca_mobile',
+        'horeca_email',
+        'horeca_company_number',
         'wanted_products',
         'contact_by',
         'localfood_chart_acceptation',
