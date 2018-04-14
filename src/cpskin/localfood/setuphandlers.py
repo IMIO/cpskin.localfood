@@ -9,21 +9,39 @@ def installLocalfood(context):
     groups_tool = site.portal_groups
     portal_memberdata = getToolByName(site, "portal_memberdata")
 
-    for group_id in (
-        'local_producer',
-        'horeca_business'
-    ):
+    for group_id in ('local_producer', 'horeca_business'):
         if group_id not in groups_tool.getGroupIds():
             groups_tool.addGroup(group_id)
 
-    for property_id in (
-        'localfood_proposed_products',
-        'localfood_wanted_products',
-    ):
+    properties = (
+        ('producer_name', 'string', ''),
+        ('producer_address', 'text', ''),
+        ('producer_phone_number', 'string', ''),
+        ('producer_mobile', 'string', ''),
+        ('producer_email', 'string', ''),
+        ('producer_company_number', 'string', ''),
+        ('proposed_products', 'lines', []),
+        ('contact_by', 'string', ''),
+        ('localfood_chart_acceptation', 'boolean', False),
+        ('genuine_form_data_and_quality', 'boolean', False),
+        ('business_name', 'string', ''),
+        ('purchasing_manager', 'string', ''),
+        ('horeca_address', 'text', ''),
+        ('horeca_phone_number', 'string', ''),
+        ('horeca_mobile', 'string', ''),
+        ('horeca_email', 'string', ''),
+        ('horeca_company_number', 'string', ''),
+        ('wanted_products', 'lines', []),
+        ('genuine_form_data', 'boolean', False),
+    )
+    for property_id, value_type, default_value in properties:
+        property_id = 'localfood_{0}'.format(property_id)
         if not portal_memberdata.hasProperty(property_id):
-            portal_memberdata.manage_addProperty(id=property_id,
-                                                 value=[],
-                                                 type="lines")
+            portal_memberdata.manage_addProperty(
+                id=property_id,
+                type=value_type,
+                value=default_value,
+            )
 
 def uninstallLocalfood(context):
     pass
