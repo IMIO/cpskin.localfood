@@ -13,6 +13,7 @@ from z3c.form.interfaces import NO_VALUE
 from zope import schema
 from zope.component import queryUtility
 from zope.interface import Interface, implements, Invalid
+from zope.schema.interfaces import RequiredMissing
 
 from cpskin.localfood import _
 
@@ -21,6 +22,12 @@ def must_be_checked(value):
     if value:
         return True
     raise Invalid(_("In order to continue, you must check this box."))
+
+
+def must_have_selection(value):
+    if value:
+        return True
+    raise RequiredMissing
 
 
 class ILocalProducerForm(Interface):
@@ -149,7 +156,8 @@ class IProfessionnalsRegistration(Interface):
             title=_(u'Product types'),
             vocabulary='collective.taxonomy.typesproduits',
         ),
-        required=False,
+        required=True,
+        constraint=must_have_selection,
     )
 
     directives.widget(wanted_products=MultiSelect2FieldWidget)
@@ -160,7 +168,8 @@ class IProfessionnalsRegistration(Interface):
             title=_(u'Product types'),
             vocabulary='collective.taxonomy.typesproduits',
         ),
-        required=False,
+        required=True,
+        constraint=must_have_selection,
     )
 
 
