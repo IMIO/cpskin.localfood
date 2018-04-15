@@ -41,6 +41,14 @@
     permission="zope2.View"
     />
 
+  <browser:page
+    name="local-map-view"
+    for="*"
+    class=".mapview.MapView"
+    permission="zope2.View"
+    template="templates/mapview.pt"
+    />
+
   <adapter
     for="zope.interface.Interface
          zope.interface.Interface
