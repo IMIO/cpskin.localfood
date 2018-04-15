@@ -5,7 +5,8 @@ Changelog
 1.0a8 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Add missing french translations
+  [mpeeters]
 
 
 1.0a7 (2018-04-15)

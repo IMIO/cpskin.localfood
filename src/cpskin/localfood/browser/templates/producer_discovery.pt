@@ -8,15 +8,14 @@
 <body>
     <div metal:fill-slot="main"
          tal:define="anonymous view/is_anonymous">
-      <tal:if condition="anonymous">
-        You must <a href="login_form">logon</a> to access to this part of the website.
+      <tal:if condition="anonymous" i18n:translate="">
+      You must <a href="" tal:attributes="href string:login_form?came_from=${context/absolute_url}/@@local-producer-discovery" i18n:translate="" i18n:name="logon">logon</a> to access to this part of the website.
       </tal:if>
       <tal:if condition="not: anonymous">
       <tal:block define="in_horeca_group view/in_horeca_group;
                           in_local_producer_group view/in_local_producer_group">
         <div tal:condition="not: python:in_horeca_group or in_local_producer_group">
-          Before continuing, you must fill the form.<br>
-          Please go to:
+          <tal:block i18n:translate="">Before continuing, you must fill the form:</tal:block><br>
           <ul>
             <li>
               <a href=""

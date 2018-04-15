@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2018-04-15 12:22+0000\n"
+"POT-Creation-Date: 2018-04-15 13:38+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -35,6 +35,10 @@ msgstr "Superficie"
 #: ../content/project.py:33
 msgid "Availability"
 msgstr "Disponibilité"
+
+#: ../browser/templates/producer_discovery.pt:18
+msgid "Before continuing, you must fill the form:"
+msgstr "Avant de continuer, vous devez vous inscrire:"
 
 #: ../browser/matchmaking.py:67
 msgid "Business name"
@@ -82,7 +86,7 @@ msgstr "Prénom"
 msgid "Gardener"
 msgstr "Potagistes"
 
-#: ../browser/templates/producer_discovery.pt:60
+#: ../browser/templates/producer_discovery.pt:59
 msgid "Horeca business that are looking for products that I propose"
 msgstr "Etablissement Horeca à la recherche de produits que je propose"
 
@@ -90,11 +94,11 @@ msgstr "Etablissement Horeca à la recherche de produits que je propose"
 msgid "I accept the chart conditions."
 msgstr "Je certifie avoir pris connaissance de la charte Alimentation locale @ Liège et remplir les conditions qui y sont reprises"
 
-#: ../browser/templates/producer_discovery.pt:22
+#: ../browser/templates/producer_discovery.pt:21
 msgid "I subscribe as a local producer"
 msgstr "Enregistrement en tant que Producteur local"
 
-#: ../browser/templates/producer_discovery.pt:29
+#: ../browser/templates/producer_discovery.pt:28
 msgid "I subscribe as an horeca business"
 msgstr "Enregistrement en tant qu'établissement Horeca"
 
@@ -128,7 +132,7 @@ msgstr "Nom"
 msgid "Lead image"
 msgstr "Image principale"
 
-#: ../browser/templates/producer_discovery.pt:38
+#: ../browser/templates/producer_discovery.pt:37
 msgid "Local producers that propose the products I am looking for"
 msgstr "Producteurs locaux proposant les produits que je recherche"
 
@@ -206,11 +210,11 @@ msgstr "Je certifie de la véracité des informations reprises dans le formulair
 msgid "The data I provide is genuine."
 msgstr "Je certifie de la véracité des informations reprises dans le formulaire ci-dessus"
 
-#: ../browser/templates/producer_discovery.pt:75
+#: ../browser/templates/producer_discovery.pt:74
 msgid "There is no horeca business for the moment who are looking for that product."
 msgstr "Il n'existe pas pour le moment d'établissement Horeca à la recherche de ce type de produit"
 
-#: ../browser/templates/producer_discovery.pt:53
+#: ../browser/templates/producer_discovery.pt:52
 msgid "There is no local producer for the moment who propose that product."
 msgstr "Il n'existe pas pour le moment de Producteur local qui propose ce type de produit"
 
@@ -231,6 +235,10 @@ msgstr "Voir"
 msgid "Wanted product types"
 msgstr "Produits recherchés"
 
+#: ../browser/templates/producer_discovery.pt:12
+msgid "You must ${logon} to access to this part of the website."
+msgstr "Vous devez vous ${logon} pour accéder à cette partie du site"
+
 #: ../browser/matchmaking.py:206
 msgid "Your preferences have been recorded."
 msgstr "Vos informations ont été enregistrées"
@@ -242,3 +250,7 @@ msgstr ""
 #: ../configure.zcml:34
 msgid "cpskin.localfood (uninstall)"
 msgstr ""
+
+#: ../browser/templates/producer_discovery.pt:12
+msgid "logon"
+msgstr "identifier"

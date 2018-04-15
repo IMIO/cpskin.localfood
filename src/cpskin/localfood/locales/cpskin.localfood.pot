@@ -4,7 +4,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2018-04-15 12:22+0000\n"
+"POT-Creation-Date: 2018-04-15 13:38+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -37,6 +37,10 @@ msgstr ""
 
 #: ../content/project.py:33
 msgid "Availability"
+msgstr ""
+
+#: ../browser/templates/producer_discovery.pt:18
+msgid "Before continuing, you must fill the form:"
 msgstr ""
 
 #: ../browser/matchmaking.py:67
@@ -85,7 +89,7 @@ msgstr ""
 msgid "Gardener"
 msgstr ""
 
-#: ../browser/templates/producer_discovery.pt:60
+#: ../browser/templates/producer_discovery.pt:59
 msgid "Horeca business that are looking for products that I propose"
 msgstr ""
 
@@ -93,11 +97,11 @@ msgstr ""
 msgid "I accept the chart conditions."
 msgstr ""
 
-#: ../browser/templates/producer_discovery.pt:22
+#: ../browser/templates/producer_discovery.pt:21
 msgid "I subscribe as a local producer"
 msgstr ""
 
-#: ../browser/templates/producer_discovery.pt:29
+#: ../browser/templates/producer_discovery.pt:28
 msgid "I subscribe as an horeca business"
 msgstr ""
 
@@ -131,7 +135,7 @@ msgstr ""
 msgid "Lead image"
 msgstr ""
 
-#: ../browser/templates/producer_discovery.pt:38
+#: ../browser/templates/producer_discovery.pt:37
 msgid "Local producers that propose the products I am looking for"
 msgstr ""
 
@@ -209,11 +213,11 @@ msgstr ""
 msgid "The data I provide is genuine."
 msgstr ""
 
-#: ../browser/templates/producer_discovery.pt:75
+#: ../browser/templates/producer_discovery.pt:74
 msgid "There is no horeca business for the moment who are looking for that product."
 msgstr ""
 
-#: ../browser/templates/producer_discovery.pt:53
+#: ../browser/templates/producer_discovery.pt:52
 msgid "There is no local producer for the moment who propose that product."
 msgstr ""
 
@@ -234,6 +238,10 @@ msgstr ""
 msgid "Wanted product types"
 msgstr ""
 
+#: ../browser/templates/producer_discovery.pt:12
+msgid "You must ${logon} to access to this part of the website."
+msgstr ""
+
 #: ../browser/matchmaking.py:206
 msgid "Your preferences have been recorded."
 msgstr ""
@@ -244,4 +252,8 @@ msgstr ""
 
 #: ../configure.zcml:34
 msgid "cpskin.localfood (uninstall)"
+msgstr ""
+
+#: ../browser/templates/producer_discovery.pt:12
+msgid "logon"
 msgstr ""
