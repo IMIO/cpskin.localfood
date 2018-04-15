@@ -130,19 +130,19 @@ class IProfessionnalsRegistration(Interface):
     )
 
     localfood_chart_acceptation = schema.Bool(
-        title=u'I accept the chart conditions.',
+        title=_(u'I accept the chart conditions.'),
         required=True,
         constraint=must_be_checked,
     )
 
     genuine_form_data = schema.Bool(
-        title=u'The data I provide is genuine.',
+        title=_(u'The data I provide is genuine.'),
         required=True,
         constraint=must_be_checked,
     )
 
     genuine_form_data_and_quality = schema.Bool(
-        title=u'The data I provide is genuine, the products are fine.',
+        title=_(u'The data I provide is genuine, the products are fine.'),
         required=True,
         constraint=must_be_checked,
     )

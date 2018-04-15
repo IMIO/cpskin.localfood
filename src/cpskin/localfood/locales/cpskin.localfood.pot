@@ -4,7 +4,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2018-04-14 17:12+0000\n"
+"POT-Creation-Date: 2018-04-15 12:22+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -87,6 +87,10 @@ msgstr ""
 
 #: ../browser/templates/producer_discovery.pt:60
 msgid "Horeca business that are looking for products that I propose"
+msgstr ""
+
+#: ../browser/matchmaking.py:133
+msgid "I accept the chart conditions."
 msgstr ""
 
 #: ../browser/templates/producer_discovery.pt:22
@@ -195,6 +199,14 @@ msgstr ""
 
 #: ../browser/matchmaking.py:177
 msgid "Subscription as a local producer"
+msgstr ""
+
+#: ../browser/matchmaking.py:145
+msgid "The data I provide is genuine, the products are fine."
+msgstr ""
+
+#: ../browser/matchmaking.py:139
+msgid "The data I provide is genuine."
 msgstr ""
 
 #: ../browser/templates/producer_discovery.pt:75
