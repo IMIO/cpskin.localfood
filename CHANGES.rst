@@ -2,7 +2,7 @@ Changelog
 =========
 
 
-1.0a7 (unreleased)
+1.0a7 (2018-04-15)
 ------------------
 
 - Add a view with the map for the homepage
