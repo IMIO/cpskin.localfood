@@ -5,7 +5,11 @@ Changelog
 1.0a7 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Add a view with the map for the homepage
+  [mpeeters]
+
+- Add professionals views (subscription and matchmaking)
+  [ndemonte, mpeeters]
 
 
 1.0a6 (2018-04-12)
