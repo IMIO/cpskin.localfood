@@ -5,7 +5,8 @@ Changelog
 1.0a10 (unreleased)
 -------------------
 
-- Nothing changed yet.
+- Fix render of the form and cleanup
+  [mpeeters]
 
 
 1.0a9 (2018-04-16)
