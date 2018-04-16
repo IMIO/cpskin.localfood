@@ -32,6 +32,7 @@
     for="*"
     class=".matchmaking.LocalProducerSubscriptionView"
     permission="zope2.View"
+    template="templates/local_product_form.pt"
     />
 
   <browser:page
@@ -39,6 +40,7 @@
     for="*"
     class=".matchmaking.HORECASubscriptionView"
     permission="zope2.View"
+    template="templates/local_product_form.pt"
     />
 
   <browser:page

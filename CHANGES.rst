@@ -5,7 +5,8 @@ Changelog
 1.0a9 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Do not give access to anonymous users to susbscription form
+  [mpeeters]
 
 
 1.0a8 (2018-04-15)

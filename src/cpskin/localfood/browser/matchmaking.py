@@ -218,6 +218,12 @@ class LocalProducerSubscriptionForm(Form):
 
 class LocalProducerSubscriptionView(FormWrapper):
     form = LocalProducerSubscriptionForm
+    view_name = '@@local-producer-form'
+
+    @property
+    def is_anonymous(self):
+        """Verify if the current user is anonymous"""
+        return api.user.is_anonymous()
 
 
 class HORECASubscriptionForm(Form):
@@ -266,6 +272,12 @@ class HORECASubscriptionForm(Form):
 
 class HORECASubscriptionView(FormWrapper):
     form = HORECASubscriptionForm
+    view_name = '@@local-horeca-form'
+
+    @property
+    def is_anonymous(self):
+        """Verify if the current user is anonymous"""
+        return api.user.is_anonymous()
 
 
 class ProducerDiscoveryView(BrowserView):
