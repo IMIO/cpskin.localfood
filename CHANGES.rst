@@ -2,7 +2,7 @@ Changelog
 =========
 
 
-1.0a9 (unreleased)
+1.0a9 (2018-04-16)
 ------------------
 
 - Do not give access to anonymous users to susbscription form
