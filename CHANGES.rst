@@ -5,7 +5,11 @@ Changelog
 1.0a11 (unreleased)
 -------------------
 
-- Nothing changed yet.
+- Change the cut for pictures on projects and community gardens
+  [mpeeters]
+
+- Display the organization logo on faceted view
+  [mpeeters]
 
 
 1.0a10 (2018-04-16)
