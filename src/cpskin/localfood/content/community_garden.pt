@@ -37,16 +37,18 @@
     <div class="card-index-image">
       <a href=""
          tal:condition="context/image"
-         tal:attributes="href string:${context/absolute_url}/@@images/image/multimedia">
+         tal:attributes="href string:${context/absolute_url}/@@images/image/multimedia;
+                         title context/title">
         <img src=""
-             tal:attributes="src string:${context/absolute_url}/@@images/image/thumb;
+             tal:attributes="src string:${context/absolute_url}/@@images/image/actualite;
                              alt context/title" />
       </a>
     <tal:while repeat="image view/images">
       <a href=""
-         tal:attributes="href string:${image/absolute_url}/@@images/image/multimedia">
+         tal:attributes="href string:${image/absolute_url}/@@images/image/multimedia;
+                         title image/title">
         <img src=""
-             tal:attributes="src string:${image/absolute_url}/@@images/image/thumb;
+             tal:attributes="src string:${image/absolute_url}/@@images/image/actualite;
                              alt image/title" />
       </a>
     </tal:while>
