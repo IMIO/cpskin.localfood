@@ -2,8 +2,8 @@ Changelog
 =========
 
 
-1.0a11 (unreleased)
--------------------
+1.0.1 (2018-04-19)
+------------------
 
 - Change the cut for pictures on projects and community gardens
   [mpeeters]
