@@ -27,14 +27,21 @@
               <tal:block
                    tal:define="title brain/pretty_title_or_id|string:;
                                url brain/getURL|string:#;
-                               view_url python:(url and useView and url + '/view') or url;
-                               image obj/image|string:;
-                               image_url python:image and view_url + '/@@images/image/evenement' or ''">
+                               view_url python:(url and useView and url + '/view') or url">
               <a href="" title=""
                  tal:attributes="href view_url;
                                  title title">
 
+                <tal:if condition="python: brain.portal_type == 'organization'"
+                        define="image obj/logo|string:;
+                                image_url python:image and view_url + '/@@images/logo/evenement' or ''">
                 <div class="image" tal:attributes="style string: background-image:url('${image_url}')"></div>
+                </tal:if>
+                <tal:if condition="python: brain.portal_type != 'organization'"
+                        define="image obj/image|string:;
+                                image_url python:image and view_url + '/@@images/image/evenement' or ''">
+                <div class="image" tal:attributes="style string: background-image:url('${image_url}')"></div>
+                </tal:if>
                 <div class="text">
                   <div tal:condition="python: brain.portal_type == 'project'">
                     <div class="title" tal:content="brain/review_state" i18n:domain="plone" i18n:translate="">state</div>
