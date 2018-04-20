@@ -43,8 +43,10 @@ def installLocalfood(context):
                 value=default_value,
             )
 
+
 def uninstallLocalfood(context):
     pass
+
 
 @implementer(INonInstallable)
 class HiddenProfiles(object):
