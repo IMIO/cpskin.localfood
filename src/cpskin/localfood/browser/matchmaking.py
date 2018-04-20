@@ -123,12 +123,6 @@ class IProfessionnalsRegistration(Interface):
         required=True,
     )
 
-    contact_by = schema.Choice(
-        title=_(u'Contact by'),
-        required=True,
-        values=['Email', 'SMS'],
-    )
-
     localfood_chart_acceptation = schema.Bool(
         title=_(u'I accept the chart conditions.'),
         required=True,
@@ -183,7 +177,6 @@ class LocalProducerSubscriptionForm(Form):
         'producer_email',
         'producer_company_number',
         'proposed_products',
-        'contact_by',
         'localfood_chart_acceptation',
         'genuine_form_data_and_quality',
     )
@@ -238,7 +231,6 @@ class HORECASubscriptionForm(Form):
         'horeca_email',
         'horeca_company_number',
         'wanted_products',
-        'contact_by',
         'localfood_chart_acceptation',
         'genuine_form_data',
     )
@@ -288,7 +280,6 @@ class ProducerDiscoveryView(BrowserView):
         ('producer_phone_number', u'Contact phone number'),
         ('producer_mobile', u'Contact mobile'),
         ('producer_email', u'Contact email'),
-        ('contact_by', u'Contact by'),
     )
 
     _horeca_contact = (
@@ -298,7 +289,6 @@ class ProducerDiscoveryView(BrowserView):
         ('horeca_phone_number', u'Contact phone number'),
         ('horeca_mobile', u'Contact mobile'),
         ('horeca_email', u'Contact email'),
-        ('contact_by', u'Contact by'),
     )
 
     def __call__(self, *args):

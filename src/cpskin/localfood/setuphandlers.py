@@ -21,7 +21,6 @@ def installLocalfood(context):
         ('producer_email', 'string', ''),
         ('producer_company_number', 'string', ''),
         ('proposed_products', 'lines', []),
-        ('contact_by', 'string', ''),
         ('localfood_chart_acceptation', 'boolean', False),
         ('genuine_form_data_and_quality', 'boolean', False),
         ('business_name', 'string', ''),
