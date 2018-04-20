@@ -17,6 +17,12 @@ from zope.schema.interfaces import RequiredMissing
 
 from cpskin.localfood import _
 
+PROPERTY_PREFIX = 'localfood'
+
+
+def _prefix(property_name):
+    return '{0}_{1}'.format(PROPERTY_PREFIX, property_name)
+
 
 def must_be_checked(value):
     if value:
@@ -30,6 +36,59 @@ def must_have_selection(value):
     raise RequiredMissing
 
 
+class NoveltyMailer(object):
+
+    def __init__(self, user_role):
+        self.user = api.user.get_current()
+
+        if user_role == 'horeca':
+            self.user_product_property = _prefix('wanted_products')
+            self.opposite_product_property = _prefix('proposed_products')
+            self.opposite_group = 'local_producer'
+        if user_role == 'producer':
+            self.user_product_property = _prefix('proposed_products')
+            self.opposite_product_property = _prefix('wanted_products')
+            self.opposite_group = 'horeca_business'
+
+    def notify_updates(self, new_product_selection):
+        already_stored_products = self.user.getProperty(
+            self.user_product_property, [])
+        worth_notifying_products = set(new_product_selection).difference(
+            already_stored_products)
+        if worth_notifying_products:
+            users_to_notify = self.get_users_for(worth_notifying_products)
+            self.send_emails_to(users_to_notify)
+
+    def get_users_for(self, new_products):
+        users = []
+        for u in api.user.get_users(groupname=self.opposite_group):
+            stored_products = u.getProperty(self.opposite_product_property, [])
+            if new_products.intersection(stored_products):
+                users.append(u)
+        return users
+
+    def send_emails_to(self, users):
+        for user in users:
+            recipient = self.user.getProperty('email')
+            if not recipient:
+                continue
+            body = _(u'''
+Bonjour,
+
+Une correspondance a été trouvée pour l'un des produits que vous avez sélectionné. 
+Rendez-vous sur https://alimentation-locale.liege.be/professionnels pour en savoir plus sur votre nouvel interlocuteur.
+
+Merci de faire le choix de l'alimentation locale, saine et durable.
+
+Alimentation locale @ Liège''')
+            api.portal.send_email(
+                sender='web@liege.be',
+                recipient=recipient,
+                subject=_(u'New match(es) found for you'),
+                body=body,
+                immediate=False)
+
+
 class ILocalProducerForm(Interface):
     """Marker interface for local producer/horeca forms"""
 
@@ -37,9 +96,8 @@ class ILocalProducerForm(Interface):
 class LocalProducerDataProvider(object):
 
     def get(self):
-        prefix = 'localfood'
         return self.member.getProperty(
-            '{0}_{1}'.format(prefix, self.field.__name__),
+            '{0}_{1}'.format(PROPERTY_PREFIX, self.field.__name__),
             NO_VALUE
         )
 
@@ -190,6 +248,9 @@ class LocalProducerSubscriptionForm(Form):
             self.status = self.formErrorsMessage
             return
         else:
+            mailer = NoveltyMailer('producer')
+            mailer.notify_updates(data.get('proposed_products', []))
+
             api.group.add_user(
                 groupname='local_producer',
                 user=api.user.get_current(),
@@ -202,8 +263,7 @@ class LocalProducerSubscriptionForm(Form):
             )
 
     def store_prefs(self, data):
-        prefix = 'localfood'
-        data_dict = {'{0}_{1}'.format(prefix, key): value or ''
+        data_dict = {'{0}_{1}'.format(PROPERTY_PREFIX, key): value or ''
                      for (key, value) in data.iteritems()}
         member = api.user.get_current()
         member.setMemberProperties(mapping=data_dict)
@@ -244,6 +304,9 @@ class HORECASubscriptionForm(Form):
             self.status = self.formErrorsMessage
             return
         else:
+            mailer = NoveltyMailer('horeca')
+            mailer.notify_updates(data.get('wanted_products', []))
+
             api.group.add_user(
                 groupname='horeca_business',
                 user=api.user.get_current())  # TODO: check if not already in
@@ -255,8 +318,7 @@ class HORECASubscriptionForm(Form):
             )
 
     def store_prefs(self, data):
-        prefix = 'localfood'
-        data_dict = {'{0}_{1}'.format(prefix, key): value or ''
+        data_dict = {'{0}_{1}'.format(PROPERTY_PREFIX, key): value or ''
                      for (key, value) in data.iteritems()}
         member = api.user.get_current()
         member.setMemberProperties(mapping=data_dict)
