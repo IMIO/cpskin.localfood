@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2018-04-15 13:38+0000\n"
+"POT-Creation-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -23,7 +23,7 @@ msgid "Accessibility"
 msgstr "Accessibilité"
 
 #: ../behavior/contact.py:52
-#: ../browser/matchmaking.py:77
+#: ../browser/matchmaking.py:135
 #: ../content/community_garden.py:43
 msgid "Address"
 msgstr "Adresse"
@@ -40,7 +40,7 @@ msgstr "Disponibilité"
 msgid "Before continuing, you must fill the form:"
 msgstr "Avant de continuer, vous devez vous inscrire:"
 
-#: ../browser/matchmaking.py:67
+#: ../browser/matchmaking.py:125
 msgid "Business name"
 msgstr "Nom de l'établissement"
 
@@ -48,27 +48,23 @@ msgstr "Nom de l'établissement"
 msgid "Community Garden"
 msgstr "Potager communautaire"
 
-#: ../browser/matchmaking.py:87
+#: ../browser/matchmaking.py:145
 msgid "Company number"
 msgstr "Numéro d'entreprise"
 
-#: ../browser/matchmaking.py:193
+#: ../browser/matchmaking.py:244
 msgid "Confirm"
 msgstr "Confirmer"
 
-#: ../browser/matchmaking.py:127
-msgid "Contact by"
-msgstr "Préférence de contact"
-
-#: ../browser/matchmaking.py:107
+#: ../browser/matchmaking.py:165
 msgid "Contact email"
 msgstr "Email du contact"
 
-#: ../browser/matchmaking.py:102
+#: ../browser/matchmaking.py:160
 msgid "Contact mobile"
 msgstr "Numéro de GSM du contact"
 
-#: ../browser/matchmaking.py:97
+#: ../browser/matchmaking.py:155
 msgid "Contact phone number"
 msgstr "Numéro de téléphone du contact"
 
@@ -90,7 +86,7 @@ msgstr "Potagistes"
 msgid "Horeca business that are looking for products that I propose"
 msgstr "Etablissement Horeca à la recherche de produits que je propose"
 
-#: ../browser/matchmaking.py:133
+#: ../browser/matchmaking.py:185
 msgid "I accept the chart conditions."
 msgstr "Je certifie avoir pris connaissance de la charte Alimentation locale @ Liège et remplir les conditions qui y sont reprises"
 
@@ -102,7 +98,7 @@ msgstr "Enregistrement en tant que Producteur local"
 msgid "I subscribe as an horeca business"
 msgstr "Enregistrement en tant qu'établissement Horeca"
 
-#: ../browser/matchmaking.py:24
+#: ../browser/matchmaking.py:30
 msgid "In order to continue, you must check this box."
 msgstr "Pour pouvoir continuer, vous devez cocher cette case"
 
@@ -140,6 +136,10 @@ msgstr "Producteurs locaux proposant les produits que je recherche"
 msgid "Manager"
 msgstr "Gestionnaire"
 
+#: ../browser/matchmaking.py:87
+msgid "New match(es) found for you"
+msgstr ""
+
 #: ../content/project.py:28
 msgid "Occupant"
 msgstr "Occupant"
@@ -158,19 +158,19 @@ msgstr "Orientation"
 msgid "Owner"
 msgstr "Propriétaire"
 
-#: ../browser/matchmaking.py:153
+#: ../browser/matchmaking.py:205
 msgid "Please select the types of product you can propose"
 msgstr "Veuillez sélectionner les types de produits proposés"
 
-#: ../browser/matchmaking.py:165
+#: ../browser/matchmaking.py:217
 msgid "Please select the types of product you want to find"
 msgstr "Veuillez sélectionner les types de produits recherchés"
 
-#: ../browser/matchmaking.py:62
+#: ../browser/matchmaking.py:120
 msgid "Producer name"
 msgstr "Nom du producteur"
 
-#: ../browser/matchmaking.py:155
+#: ../browser/matchmaking.py:207
 msgid "Product types"
 msgstr "Type de produits"
 
@@ -182,11 +182,11 @@ msgstr "Projet"
 msgid "Project Author"
 msgstr "Auteur de projet et réalisation"
 
-#: ../browser/matchmaking.py:152
+#: ../browser/matchmaking.py:204
 msgid "Proposed product types"
 msgstr "Produits proposés"
 
-#: ../browser/matchmaking.py:72
+#: ../browser/matchmaking.py:130
 msgid "Purchasing manager"
 msgstr "Nom du responsable achats"
 
@@ -194,19 +194,19 @@ msgstr "Nom du responsable achats"
 msgid "Start of occupation"
 msgstr "Début de l’occupation"
 
-#: ../browser/matchmaking.py:225
+#: ../browser/matchmaking.py:284
 msgid "Subscription as a HORECA business"
 msgstr "Enregistrement en tant qu'établissement Horeca"
 
-#: ../browser/matchmaking.py:177
+#: ../browser/matchmaking.py:229
 msgid "Subscription as a local producer"
 msgstr "Enregistrement en tant que Producteur local"
 
-#: ../browser/matchmaking.py:145
+#: ../browser/matchmaking.py:197
 msgid "The data I provide is genuine, the products are fine."
 msgstr "Je certifie de la véracité des informations reprises dans le formulaire ci-dessus ainsi que la qualité des produits proposés, leur origine et leurs modes de productions"
 
-#: ../browser/matchmaking.py:139
+#: ../browser/matchmaking.py:191
 msgid "The data I provide is genuine."
 msgstr "Je certifie de la véracité des informations reprises dans le formulaire ci-dessus"
 
@@ -231,15 +231,16 @@ msgstr ""
 msgid "View"
 msgstr "Voir"
 
-#: ../browser/matchmaking.py:164
+#: ../browser/matchmaking.py:216
 msgid "Wanted product types"
 msgstr "Produits recherchés"
 
+#: ../browser/templates/local_product_form.pt:12
 #: ../browser/templates/producer_discovery.pt:12
 msgid "You must ${logon} to access to this part of the website."
 msgstr "Vous devez vous ${logon} pour accéder à cette partie du site"
 
-#: ../browser/matchmaking.py:206
+#: ../browser/matchmaking.py:260
 msgid "Your preferences have been recorded."
 msgstr "Vos informations ont été enregistrées"
 
@@ -251,6 +252,7 @@ msgstr ""
 msgid "cpskin.localfood (uninstall)"
 msgstr ""
 
+#: ../browser/templates/local_product_form.pt:12
 #: ../browser/templates/producer_discovery.pt:12
 msgid "logon"
 msgstr "identifier"
