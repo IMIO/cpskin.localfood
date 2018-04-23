@@ -138,7 +138,7 @@ msgstr "Gestionnaire"
 
 #: ../browser/matchmaking.py:87
 msgid "New match(es) found for you"
-msgstr ""
+msgstr "Correspondance trouvée pour l'un des produits que vous avez sélectionné"
 
 #: ../content/project.py:28
 msgid "Occupant"
