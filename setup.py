@@ -14,7 +14,7 @@ long_description = '\n\n'.join([
 
 setup(
     name='cpskin.localfood',
-    version='1.0.2.dev0',
+    version='1.0.2',
     description="Local food implementation for IA Web",
     long_description=long_description,
     # Get more from https://pypi.python.org/pypi?%3Aaction=list_classifiers
