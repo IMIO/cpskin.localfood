@@ -5,7 +5,11 @@ Changelog
 1.0.2 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Send mail when new professional match found
+  [ndemonte, mpeeters]
+
+- Remove the `contact_by` field
+  [mpeeters]
 
 
 1.0.1 (2018-04-19)
