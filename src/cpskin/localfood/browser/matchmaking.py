@@ -69,7 +69,7 @@ class NoveltyMailer(object):
 
     def send_emails_to(self, users):
         for user in users:
-            recipient = self.user.getProperty('email')
+            recipient = user.getProperty('email')
             if not recipient:
                 continue
             body = _(u'''
