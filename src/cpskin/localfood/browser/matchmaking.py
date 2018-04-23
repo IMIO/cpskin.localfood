@@ -76,7 +76,7 @@ class NoveltyMailer(object):
             body = _(u'''
 Bonjour,
 
-Une correspondance a été trouvée pour l'un des produits que vous avez sélectionné. 
+Une correspondance a été trouvée pour l'un des produits que vous avez sélectionné.
 Rendez-vous sur https://alimentation-locale.liege.be/professionnels pour en savoir plus sur votre nouvel interlocuteur.
 
 Merci de faire le choix de l'alimentation locale, saine et durable.
