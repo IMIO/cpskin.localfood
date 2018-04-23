@@ -12,6 +12,7 @@ from z3c.form.form import Form
 from z3c.form.interfaces import NO_VALUE
 from zope import schema
 from zope.component import queryUtility
+from zope.i18n import translate
 from zope.interface import Interface, implements, Invalid
 from zope.schema.interfaces import RequiredMissing
 
@@ -84,7 +85,8 @@ Alimentation locale @ Liège''')
             api.portal.send_email(
                 sender='web@liege.be',
                 recipient=recipient,
-                subject=_(u'New match(es) found for you'),
+                subject=translate(_(u'New match(es) found for you'),
+                                  target_language='fr'),
                 body=body,
                 immediate=False)
 
