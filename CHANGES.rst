@@ -5,7 +5,8 @@ Changelog
 1.0.3 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Use collection image scale in priority in faceted-cards
+  [ndemonte]
 
 
 1.0.2 (2018-04-23)

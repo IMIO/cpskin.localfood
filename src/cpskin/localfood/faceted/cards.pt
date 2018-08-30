@@ -9,6 +9,7 @@
   <metal:content-core fill-slot="content-core">
     <metal:block define-macro="content-core">
       <div tal:define="
+        scale python: getattr(context, 'collection_image_scale', 'preview');
         folderContents folderContents | python:context.getFolderContents();
         Batch python:modules['Products.CMFPlone'].Batch;
         b_start python:request.get('b_start', 0);
@@ -34,12 +35,12 @@
 
                 <tal:if condition="python: brain.portal_type == 'organization'"
                         define="image obj/logo|string:;
-                                image_url python:image and view_url + '/@@images/logo/evenement' or ''">
+                                image_url python:image and view_url + '/@@images/logo/' + scale or ''">
                 <div class="image" tal:attributes="style string: background-image:url('${image_url}')"></div>
                 </tal:if>
                 <tal:if condition="python: brain.portal_type != 'organization'"
                         define="image obj/image|string:;
-                                image_url python:image and view_url + '/@@images/image/evenement' or ''">
+                                image_url python:image and view_url + '/@@images/image/' + scale or ''">
                 <div class="image" tal:attributes="style string: background-image:url('${image_url}')"></div>
                 </tal:if>
                 <div class="text">
