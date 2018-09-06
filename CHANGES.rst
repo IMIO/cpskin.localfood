@@ -2,7 +2,7 @@ Changelog
 =========
 
 
-1.0.3 (unreleased)
+1.0.3 (2018-09-06)
 ------------------
 
 - Use collection image scale in priority in faceted-cards
